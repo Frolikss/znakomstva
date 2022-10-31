@@ -1,0 +1,111 @@
+@import 'header.scss';
+@import 'footer.scss';
+@import 'default.scss';
+@import 'variables';
+
+.main {
+    min-height: calc(100vh - 6.875rem - 4.6875rem);   
+
+    .login__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 72%;
+    }
+
+    .login__header {
+        font-size: 3.75rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 0 0.625em 0;
+    }
+
+    .login__text {
+        text-align: center;
+        line-height: 150%;
+    }
+
+    .login__form {
+        width: 50%;
+        margin: 3.125rem 0 0;
+
+        .login__form__row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login__form-input {
+            width: 100%;
+            position: relative;
+            color: #8B5D9A;
+            background: $input-bg;
+            border: none;
+            border-radius: 6.25rem;
+            padding: 1.4375rem 0;
+            text-indent: 1rem;
+            margin: 0 0 0.625rem 0;
+    
+            &::placeholder {
+                font-family: 'Rubik', sans-serif;
+                color: #8B5D9A;
+            }
+        }
+
+        .login__form-button {
+            width: 100%;
+            padding: 1.4375rem 0;
+            border-radius: 6.25rem;
+            background: linear-gradient(90deg, #EE0979, #FF6A00);
+            box-shadow: 0 5px 50px rgba(238, 9, 121, .2),
+                        0 5px 50px rgba(255, 106, 0, .2);
+            z-index: -1;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .login__form-button-forget {
+            width: 100%;
+            font-size: 0.875rem;
+            align-self: center;
+            color: #925FA4;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .blob-left, .blob-right {
+        top: 20%;
+    }
+
+    .main {
+        min-height: calc(100vh - 6.875rem - 10.9375rem);
+        
+        .container {
+            padding: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blob-right {
+        top: 50%;
+    }
+
+    .main .login__header {
+        font-size: 2.25rem;
+    }
+
+    .main .login__form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        min-height: calc(100vh - 9.5rem - 10.9375rem);
+
+        .login__row {
+            max-width: 90%;
+        }
+    }
+}
