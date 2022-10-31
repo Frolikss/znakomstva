@@ -32,11 +32,10 @@
         align-items: center;
     }
     
-    .header__logo {
+    .header__logo-link {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 1.25rem;
+        gap: 1rem;
     }
     
     .header__menu_logout {

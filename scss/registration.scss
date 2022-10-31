@@ -3,6 +3,11 @@
 @import 'variables';
 @import 'default.scss';
 
+body {
+    background: $color-bg;
+    background: radial-gradient(circle at 40% top, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+}
+
 .main {
     min-height: calc(100vh - 6.875rem - 4.6875rem); 
     align-items: stretch;
@@ -99,6 +104,8 @@
 
         .register__input-month {
             width: 70%;
+            appearance: none;
+            background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, $input-bg;
         }
 
         .register__create-button {
@@ -118,8 +125,12 @@
 }
 
 @media (max-width: 768px) {
+    .wrapper .blob-left {
+        top: 45%;
+    }
+
     .blob-right {
-        top: 50%;
+        top: 30%;
     }
 }
 
@@ -127,6 +138,21 @@
     .main {
         .register__text {
             font-size: 1.75rem;
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .main {
+        .register__input {
+            font-size: 0.75rem;
+        }
+
+        .register__row {
+            .register__input-month {
+                width: 60%;
+                background: $input-bg;
+            }
         }
     }
 }

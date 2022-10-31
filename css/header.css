@@ -24,11 +24,10 @@
   justify-content: space-between;
   align-items: center;
 }
-.header .header__logo {
+.header .header__logo-link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 .header .header__menu_logout {
   display: flex;

@@ -24,11 +24,10 @@
   justify-content: space-between;
   align-items: center;
 }
-.header .header__logo {
+.header .header__logo-link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 .header .header__menu_logout {
   display: flex;
@@ -71,16 +70,17 @@
 .footer .footer__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .footer .footer__list {
   display: flex;
   justify-content: space-between;
   gap: 1.125rem;
 }
-.footer .footer__lang {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
+.footer .footer__lang-select {
+  color: #fff;
+  background: none;
+  border: none;
 }
 
 @media (max-width: 1024px) {
@@ -118,6 +118,7 @@
 a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 body {

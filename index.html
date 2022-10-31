@@ -175,8 +175,10 @@
             <div class="container">
                 <div class="header__row">
                     <div class="header__logo">
-                        <img class="header__logo-image" src="assets/svg/logo.svg" alt="logo">
-                        <p class="header__logo-name">Znakomstva.com</p>
+                        <a href="/index.html" class="header__logo-link">
+                            <img class="header__logo-image" src="assets/svg/logo.svg" alt="logo">
+                            <p class="header__logo-name">Znakomstva.com</p>
+                        </a>
                     </div>
                     <div class="header__menu">
                         <div class="header__menu_logout">
@@ -298,19 +300,11 @@
                                 Для современного мира сплочённость команды профессионалов однозначно фиксирует необходимость системы обучения кадров, соответствующей насущным потребностям.
                             </p>
                             <form class="login__form">
-                                <ul class="login__form__row">
-                                    <li class="login__form-item">
                                         <input class="login__form-input" type="email" name="email" placeholder="Введите электронную почту">
-                                    </li>
-                                    <li class="login__form-item">
                                         <input class="login__form-input" type="password" name="password" placeholder="Введите пароль">
-                                    </li>
-                                    <li class="login__form-item">
                                         <button class="login__form-button">
                                             Войти
                                         </button>
-                                    </li>
-                                </ul>
                                 <button class="login__form-button-forget">
                                     Я не помню пароль
                                 </button>
@@ -398,12 +392,11 @@
                     </div>
                     <p class="footer__politics">Политика обработки персональных данных</p>
                     <div class="footer__lang">
-                        <p class="footer__lang-text">RU</p>
-                        <button class="footer__lang-button">
-                            <svg class="header__arrow-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                <path d="M1.5 0.833344L5 4.33334L8.5 0.833344" stroke="white" stroke-linecap="square"></path>
-                            </svg>
-                        </button>
+                        <select class="footer__lang-select">
+                            <option value="ru">RU</option>
+                            <option value="ru">UA</option>
+                            <option value="ru">US</option>
+                        </select>
                     </div>
                     <p class="footer__copyright">
                         © Company 2021

@@ -5,6 +5,7 @@
     .footer__row {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .footer__list {
@@ -13,10 +14,10 @@
         gap: 1.125rem;
     }
 
-    .footer__lang {
-        display: flex;
-        align-items: center;
-        gap: 0.375rem;
+    .footer__lang-select {
+        color: #fff;
+        background: none;
+        border: none;
     }
 }
 

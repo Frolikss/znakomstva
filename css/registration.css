@@ -24,11 +24,10 @@
   justify-content: space-between;
   align-items: center;
 }
-.header .header__logo {
+.header .header__logo-link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 .header .header__menu_logout {
   display: flex;
@@ -71,16 +70,17 @@
 .footer .footer__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .footer .footer__list {
   display: flex;
   justify-content: space-between;
   gap: 1.125rem;
 }
-.footer .footer__lang {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
+.footer .footer__lang-select {
+  color: #fff;
+  background: none;
+  border: none;
 }
 
 @media (max-width: 1024px) {
@@ -118,6 +118,7 @@
 a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 body {
@@ -173,6 +174,11 @@ button {
   flex-direction: column;
   flex: 1 1 auto;
   position: relative;
+}
+
+body {
+  background: #230E2B;
+  background: radial-gradient(circle at 40% top, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
 }
 
 .main {
@@ -267,6 +273,10 @@ button {
 }
 .main .register__row .register__input-month {
   width: 70%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, #42204E;
 }
 .main .register__row .register__create-button {
   color: #fff;
@@ -281,12 +291,24 @@ button {
   }
 }
 @media (max-width: 768px) {
+  .wrapper .blob-left {
+    top: 45%;
+  }
   .blob-right {
-    top: 50%;
+    top: 30%;
   }
 }
 @media (max-width: 600px) {
   .main .register__text {
     font-size: 1.75rem;
+  }
+}
+@media (max-width: 340px) {
+  .main .register__input {
+    font-size: 0.75rem;
+  }
+  .main .register__row .register__input-month {
+    width: 60%;
+    background: #42204E;
   }
 }
