@@ -142,22 +142,24 @@ button {
   overflow: hidden;
   position: relative;
 }
-.wrapper .blob-left {
+
+.blob-left {
   position: absolute;
   width: 100%;
   left: -60%;
   z-index: -1;
 }
-.wrapper .blob-left:nth-child(2) {
+.blob-left:nth-of-type(2) {
   filter: blur(0.5rem);
 }
-.wrapper .blob-right {
+
+.blob-right {
   position: absolute;
   width: 100%;
   right: -60%;
   z-index: -1;
 }
-.wrapper .blob-right:nth-child(2) {
+.blob-right:last-of-type {
   filter: blur(0.5rem);
 }
 
@@ -206,13 +208,11 @@ button {
 }
 .main .login__form .login__form-input {
   width: 100%;
-  position: relative;
   color: #8B5D9A;
-  background: #42204E;
   border: none;
   border-radius: 6.25rem;
   padding: 1.4375rem 0;
-  text-indent: 1rem;
+  text-indent: 3rem;
   margin: 0 0 0.625rem 0;
 }
 .main .login__form .login__form-input::-moz-placeholder {
@@ -226,6 +226,12 @@ button {
 .main .login__form .login__form-input::placeholder {
   font-family: "Rubik", sans-serif;
   color: #8B5D9A;
+}
+.main .login__form .login__form-input:first-child {
+  background: url(/assets/svg/message.svg) no-repeat left 1rem center, #42204E;
+}
+.main .login__form .login__form-input:nth-child(2) {
+  background: url(/assets/svg/password.svg) no-repeat left 1rem center, url(/assets/svg/eye.svg) no-repeat right 1rem center, #42204E;
 }
 .main .login__form .login__form-button {
   width: 100%;

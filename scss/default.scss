@@ -26,27 +26,27 @@ button {
     flex-direction: column;
     overflow: hidden;
     position: relative;
+}
 
-    .blob-left {
-        position: absolute;
-        width: 100%;
-        left: -60%;
-        z-index: -1;
+.blob-left {
+    position: absolute;
+    width: 100%;
+    left: -60%;
+    z-index: -1;
 
-        &:nth-child(2) {
-            filter: blur(.5rem);
-        }
+    &:nth-of-type(2) {
+        filter: blur(.5rem);
     }
+}
 
-    .blob-right {
-        position: absolute;
-        width: 100%;
-        right: -60%;
-        z-index: -1;
+.blob-right {
+    position: absolute;
+    width: 100%;
+    right: -60%;
+    z-index: -1;
 
-        &:nth-child(2) {
-            filter: blur(.5rem);
-        }
+    &:last-of-type {
+        filter: blur(.5rem);
     }
 }
 

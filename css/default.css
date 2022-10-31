@@ -25,22 +25,24 @@ button {
   overflow: hidden;
   position: relative;
 }
-.wrapper .blob-left {
+
+.blob-left {
   position: absolute;
   width: 100%;
   left: -60%;
   z-index: -1;
 }
-.wrapper .blob-left:nth-child(2) {
+.blob-left:nth-of-type(2) {
   filter: blur(0.5rem);
 }
-.wrapper .blob-right {
+
+.blob-right {
   position: absolute;
   width: 100%;
   right: -60%;
   z-index: -1;
 }
-.wrapper .blob-right:nth-child(2) {
+.blob-right:last-of-type {
   filter: blur(0.5rem);
 }
 

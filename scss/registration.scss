@@ -50,6 +50,22 @@ body {
             }
         }
 
+        .register__input_icon {
+            text-indent: 3rem;
+
+            &:first-child {
+                background: url(/assets/svg/user.svg) no-repeat left 1rem center, $input-bg;
+            }
+
+            &:nth-of-type(2) {
+                background: url(/assets/svg/message.svg) no-repeat left 1rem center, $input-bg;
+            }
+
+            &:last-of-type {
+                background: url(/assets/svg/password.svg) no-repeat left 1rem center, url(/assets/svg/eye.svg) no-repeat right 1rem center ,$input-bg;
+            }
+        }
+
         .register__date {
             display: flex;
             gap: 0.3125rem;

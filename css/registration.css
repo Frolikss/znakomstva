@@ -142,22 +142,24 @@ button {
   overflow: hidden;
   position: relative;
 }
-.wrapper .blob-left {
+
+.blob-left {
   position: absolute;
   width: 100%;
   left: -60%;
   z-index: -1;
 }
-.wrapper .blob-left:nth-child(2) {
+.blob-left:nth-of-type(2) {
   filter: blur(0.5rem);
 }
-.wrapper .blob-right {
+
+.blob-right {
   position: absolute;
   width: 100%;
   right: -60%;
   z-index: -1;
 }
-.wrapper .blob-right:nth-child(2) {
+.blob-right:last-of-type {
   filter: blur(0.5rem);
 }
 
@@ -225,6 +227,18 @@ body {
 .main .register__row .register__input::placeholder {
   font-family: "Rubik", sans-serif;
   color: #8B5D9A;
+}
+.main .register__row .register__input_icon {
+  text-indent: 3rem;
+}
+.main .register__row .register__input_icon:first-child {
+  background: url(/assets/svg/user.svg) no-repeat left 1rem center, #42204E;
+}
+.main .register__row .register__input_icon:nth-of-type(2) {
+  background: url(/assets/svg/message.svg) no-repeat left 1rem center, #42204E;
+}
+.main .register__row .register__input_icon:last-of-type {
+  background: url(/assets/svg/password.svg) no-repeat left 1rem center, url(/assets/svg/eye.svg) no-repeat right 1rem center, #42204E;
 }
 .main .register__row .register__date {
   display: flex;
