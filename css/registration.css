@@ -15,6 +15,10 @@
   align-items: center;
   gap: 0.5rem;
 }
+.header .header__country-row .header__country-button {
+  align-self: flex-start;
+  height: 24px;
+}
 .header .header__row {
   display: flex;
   justify-content: space-between;
@@ -173,23 +177,23 @@ button {
 
 .main {
   min-height: calc(100vh - 6.875rem - 4.6875rem);
+  align-items: stretch;
 }
 .main .register__text {
   font-size: 2.25em;
+  text-align: center;
   margin: 0 0 0.625rem 0;
-  white-space: nowrap;
 }
 .main .register__subtext {
   color: #6E447B;
   margin: 0 0 1.875rem 0;
   text-align: center;
-  white-space: nowrap;
 }
 .main .register__row {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0 auto;
+  width: 100%;
 }
 .main .register__row .register__form {
   display: flex;
@@ -219,13 +223,14 @@ button {
 .main .register__row .register__date {
   display: flex;
   gap: 0.3125rem;
+  width: 100%;
 }
 .main .register__row .register__gender {
   display: flex;
   justify-content: space-around;
 }
 .main .register__row .register__gender .gender {
-  padding: 3em;
+  padding: 2em;
   border: 1px solid #EE0D88;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -257,12 +262,31 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 3em;
+  width: 25%;
   text-align: center;
+}
+.main .register__row .register__input-month {
+  width: 70%;
 }
 .main .register__row .register__create-button {
   color: #fff;
   background: linear-gradient(90deg, #EE0979, #FF6A00);
   box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
   z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .blob-left, .blob-right {
+    top: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .blob-right {
+    top: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .main .register__text {
+    font-size: 1.75rem;
+  }
 }
