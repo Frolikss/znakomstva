@@ -1,7 +1,9 @@
-@import 'header';
-@import 'footer';
-@import 'variables';
-@import 'default.scss';
+@import '_header';
+@import '_footer';
+@import '_variables';
+@import '_default.scss';
+
+@include header__logout();
 
 body {
     background: $color-bg;
@@ -138,6 +140,9 @@ body {
     .blob-left, .blob-right {
         top: 20%;
     }
+    .main {
+        min-height: calc(100vh - 6.875rem - 10.9375rem);
+    }
 }
 
 @media (max-width: 768px) {
@@ -152,6 +157,7 @@ body {
 
 @media (max-width: 600px) {
     .main {
+        min-height: calc(100vh - 9.5rem - 10.9375rem);
         .register__text {
             font-size: 1.75rem;
         }
