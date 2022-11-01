@@ -1,4 +1,4 @@
-@use 'variables.scss' as *;
+@use "variables.scss" as *;
 
 a {
     color: #fff;
@@ -7,10 +7,10 @@ a {
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
-	color: #fff;
-	background: $color-bg;
-    background: radial-gradient(circle at center bottom, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+    font-family: "Rubik", sans-serif;
+    color: #fff;
+    background: $color-bg;
+    background: radial-gradient(circle at center bottom, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
     cursor: default;
 }
 
@@ -40,7 +40,7 @@ input:focus {
     z-index: -1;
 
     &:nth-of-type(2) {
-        filter: blur(.5rem);
+        filter: blur(0.5rem);
     }
 }
 
@@ -51,7 +51,7 @@ input:focus {
     z-index: -1;
 
     &:last-of-type {
-        filter: blur(.5rem);
+        filter: blur(0.5rem);
     }
 }
 

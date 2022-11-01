@@ -57,7 +57,8 @@
             margin: 0 auto;
         }
 
-        .profile__like, .profile__close {
+        .profile__like,
+        .profile__close {
             margin: 0 auto 1.875rem;
             padding: 1.3rem 1.125rem 1rem;
             border-radius: 3.125rem;
@@ -67,7 +68,7 @@
 
         .profile__close {
             display: none;
-            background: linear-gradient(90deg, #0575E6 0%, #021B79 100%);
+            background: linear-gradient(90deg, #0575e6 0%, #021b79 100%);
         }
     }
 
@@ -179,13 +180,13 @@
 @media (max-width: 768px) {
     .profile__block {
         grid-template-areas:
-        "photo"
-        "photo"
-        "text"
-        "head"
-        "subphoto"
-        "data"
-        "regdate";
+            "photo"
+            "photo"
+            "text"
+            "head"
+            "subphoto"
+            "data"
+            "regdate";
         gap: 2rem;
 
         .profile__row_photo {
@@ -213,8 +214,9 @@
     .header {
         background: none;
 
-        .header__bell-svg path, .header__search path {
-            fill:#42204E;
+        .header__bell-svg path,
+        .header__search path {
+            fill: #42204e;
         }
     }
 
@@ -226,8 +228,11 @@
         .profile {
             margin: 0;
 
-            .profile__subphotos, .profile__head,
-            .profile__data, .profile__text, .profile__regdate {
+            .profile__subphotos,
+            .profile__head,
+            .profile__data,
+            .profile__text,
+            .profile__regdate {
                 padding: 0 1rem;
             }
 
@@ -247,7 +252,7 @@
         .profile__subphotos {
             display: flex;
             gap: 0.5rem;
-            overflow-x: auto;   
+            overflow-x: auto;
             -ms-overflow-style: none;
             scrollbar-width: none;
         }

@@ -4,11 +4,11 @@
 
 body {
     background: $color-bg;
-    background: radial-gradient(circle at 40% top, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+    background: radial-gradient(circle at 40% top, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
 }
 
 .main {
-    min-height: calc(100vh - 6.875rem - 4.6875rem); 
+    min-height: calc(100vh - 6.875rem - 4.6875rem);
     align-items: stretch;
 
     .register__text {
@@ -18,7 +18,7 @@ body {
     }
 
     .register__subtext {
-        color: #6E447B;
+        color: #6e447b;
         margin: 0 0 1.875rem 0;
         text-align: center;
     }
@@ -51,11 +51,11 @@ body {
             border: 0;
             border-radius: 6.25rem;
             background: $input-bg;
-            color: #8B5D9A;
+            color: #8b5d9a;
 
             &::placeholder {
-                font-family: 'Rubik', sans-serif;
-                color: #8B5D9A;
+                font-family: "Rubik", sans-serif;
+                color: #8b5d9a;
             }
         }
 
@@ -85,11 +85,11 @@ body {
 
         .register__gender {
             display: flex;
-            justify-content: space-around;        
+            justify-content: space-around;
 
             .gender {
                 padding: 2em;
-                border: 1px solid #EE0D88; 
+                border: 1px solid #ee0d88;
                 appearance: none;
                 border-radius: 6.25rem;
                 width: 50%;
@@ -100,14 +100,12 @@ body {
                 }
 
                 &:first-child:checked {
-                    background: url(/assets/svg/male.svg) no-repeat center,
-                    #056BDA;
+                    background: url(/assets/svg/male.svg) no-repeat center, #056bda;
                     border: none;
                 }
 
                 &:last-child:checked {
-                    background: url(/assets/svg/female.svg) no-repeat center,
-                    #056BDA;
+                    background: url(/assets/svg/female.svg) no-repeat center, #056bda;
                     border: none;
                 }
             }
@@ -115,15 +113,18 @@ body {
 
         .register__day {
             font-size: 0.875rem;
-            color: #6E447B;
+            color: #6e447b;
         }
 
-        .register__input-day, .register__input-month, .register__input-year {
+        .register__input-day,
+        .register__input-month,
+        .register__input-year {
             padding: 1.4375rem;
             text-indent: 0;
         }
 
-        .register__input-day, .register__input-year {
+        .register__input-day,
+        .register__input-year {
             appearance: none;
             width: 25%;
             text-align: center;
@@ -138,14 +139,14 @@ body {
         .register__create-button {
             color: #fff;
             background: $button-bg;
-            box-shadow: 0 5px 50px rgba(238, 9, 121, .2),
-                        0 5px 50px rgba(255, 106, 0, .2);
+            box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
         }
     }
 }
 
 @media (max-width: 1024px) {
-    .blob-left, .blob-right {
+    .blob-left,
+    .blob-right {
         top: 20%;
     }
     .main {

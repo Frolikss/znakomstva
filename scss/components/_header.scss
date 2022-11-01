@@ -124,7 +124,7 @@
                 width: 1.875rem;
                 height: 1.5625rem;
             }
-        
+
             .header__burger::before,
             .header__burger::after {
                 content: "";
@@ -135,7 +135,7 @@
                 height: 3px;
                 border-radius: 6.25rem;
             }
-        
+
             .header__burger span {
                 position: absolute;
                 background: $button-bg;
@@ -145,11 +145,11 @@
                 top: 11px;
                 border-radius: 6.25rem;
             }
-        
+
             .header__burger::before {
                 top: 0;
             }
-        
+
             .header__burger::after {
                 bottom: 0;
             }
@@ -162,16 +162,16 @@
         .header .header__country {
             display: none;
         }
-    
+
         .header__row {
             flex-direction: column;
             margin: 1.25rem 0 1.875rem 0;
-    
+
             .header__logo {
                 margin: 0 0 1.25rem 0;
             }
         }
-    
+
         .header__menu_logout {
             flex-direction: column;
         }
@@ -246,4 +246,3 @@
         display: none;
     }
 }
-
