@@ -308,7 +308,6 @@ input:focus {
 .main .catalog__row {
   display: flex;
   gap: 1.25rem;
-  overflow-x: auto;
 }
 .main .catalog__row .catalog__item {
   display: flex;
@@ -350,6 +349,19 @@ input:focus {
   margin: 0.625rem;
 }
 
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+  }
+  .main .catalog__row {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .main .catalog__row::-webkit-scrollbar {
+    display: none;
+  }
+}
 @media (max-width: 425px) {
   .main .catalog__col .catalog__header {
     font-size: 1.376rem;

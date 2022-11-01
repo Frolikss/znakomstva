@@ -6,15 +6,19 @@
 @include header__login();
 
 .main {
-    min-height: 100vh;
+    min-height: calc(100vh - 10.625rem - 4.6875rem);
+
+    .profile {
+        margin: 1rem 0 0 0;
+    }
 
     .profile__changer {
         align-self: center;
         background: linear-gradient(#2d1436, #2d1436) padding-box,
-        linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+            linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
         border-radius: 10rem;
         border: 1px solid transparent;
-        padding: 1.25rem;
+        padding: 1.25rem 1.3rem 1.1rem;
     }
 
     .profile__col {
@@ -24,11 +28,18 @@
 }
 
 .profile__block {
-    display: flex;
-    justify-content: space-between;
-    gap: 3.125rem;
+    display: grid;
+    grid-template-areas:
+        "photo head"
+        "photo data"
+        "photo text"
+        "subphoto text"
+        "subphoto regdate";
+    gap: 0 1.875rem;
 
     .profile__row_photo {
+        grid-area: photo;
+
         .profile__photo {
             display: flex;
             flex-direction: column;
@@ -40,79 +51,241 @@
             margin: 0 0 0.625rem 0;
         }
 
-        .profile__subphotos {
-            display: flex;
-            justify-content: space-between;
-        }
-
         .profile__bookmark {
             padding: 1.875rem;
             align-self: flex-start;
         }
 
-        .profile__like {
+        .profile__photo-buttons {
+            margin: 0 auto;
+        }
+
+        .profile__like, .profile__close {
             margin: 0 auto 1.875rem;
-            padding: 1.125rem 1.125rem 1rem;
-            box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
+            padding: 1.3rem 1.125rem 1rem;
             border-radius: 3.125rem;
             width: 3.75rem;
             background: $button-bg;
         }
+
+        .profile__close {
+            display: none;
+            background: linear-gradient(90deg, #0575E6 0%, #021B79 100%);
+        }
     }
 
-    .profile__row-info {
+    .profile__subphotos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: subphoto;
+    }
+
+    .profile__subphotos > * {
+        width: 5.5625rem;
+        height: 5.5625rem;
+    }
+
+    .profile__head {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1.875rem;
-
-
-        .profile__head {
-            display: flex;
-            flex-direction: column;
-            gap: 0.625rem;
-        }
+        gap: 0.625rem;
+        font-size: 2rem;
+        grid-area: head;
 
         .profile__header-row {
             display: flex;
             gap: 0.5rem;
-            font-size: 2rem;
-            .profile__status {
-                align-self: flex-start;
-            }
+        }
+
+        .profile__status {
+            align-self: flex-start;
         }
 
         .profile__button {
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 13.75rem;
             gap: 0.625rem;
             font-size: 0.875rem;
             background: $button-bg;
             border-radius: 6.25rem;
             padding: 0.875rem 1.875rem;
         }
+    }
 
-        .profile__data-row {
-            display: flex;
-            justify-content: space-between;
-        }
+    .profile__data {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+        grid-area: data;
 
-        .profile__data-col {
-            display: flex;
-            flex-direction: column;
-            gap: 0.625rem;
+        .profile__table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.625em;
             font-weight: 400;
         }
 
-        .profile__data-first {
-            font-size: 1.125rem;
-            font-weight: 500;
-            margin: 0 0 0.625rem 0;
+        .profile__table-row {
+            background: url(/assets/svg/lines.svg) no-repeat center;
         }
 
-        .profile__data-col:last-child {
+        .profile__table-row:first-child {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        .profile__table-col:last-child {
             text-align: end;
+        }
+    }
+
+    .profile__text {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        grid-area: text;
+    }
+
+    .profile__name {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .profile__par {
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .profile__regdate {
+        grid-area: regdate;
+        color: #8b5d9a;
+    }
+}
+
+@media (max-width: 1055px) {
+    .profile__changer {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .profile__block {
+        .profile__text {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .profile__block {
+        grid-template-areas:
+        "photo"
+        "photo"
+        "text"
+        "head"
+        "subphoto"
+        "data"
+        "regdate";
+        gap: 2rem;
+
+        .profile__row_photo {
+            margin: 0 auto;
+        }
+
+        .profile__head {
+            .profile__header-row {
+                display: none;
+            }
+
+            .profile__button {
+                width: auto;
+            }
+        }
+
+        .profile__text {
+            font-size: 1rem;
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        background: none;
+
+        .header__bell-svg path, .header__search path {
+            fill:#42204E;
+        }
+    }
+
+    .main {
+        .container {
+            padding: 0;
+        }
+
+        .profile {
+            margin: 0;
+
+            .profile__subphotos, .profile__head,
+            .profile__data, .profile__text, .profile__regdate {
+                padding: 0 1rem;
+            }
+
+            .profile__regdate {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .profile__block {
+        .profile__head {
+            .profile__button {
+                padding: 1.4375rem 1.875rem;
+            }
+        }
+
+        .profile__subphotos {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;   
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .profile__subphotos::-webkit-scrollbar {
+            display: none;
+        }
+
+        .profile__row_photo {
+            width: 100%;
+            height: calc(100vh - 7.5rem);
+
+            .profile__bookmark {
+                display: none;
+            }
+
+            .profile__photo {
+                position: relative;
+                top: -20%;
+                justify-content: flex-end;
+                width: 100%;
+                height: 100vh;
+                border-radius: 0;
+                background-size: cover;
+                z-index: -1;
+            }
+
+            .profile__photo-buttons {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .profile__close {
+                display: block;
+            }
         }
     }
 }

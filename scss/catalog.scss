@@ -5,6 +5,8 @@
 
 @include header__login();
 
+
+
 .main {
     .catalog__col {
         display: flex;
@@ -21,7 +23,6 @@
     .catalog__row {
         display: flex;
         gap: 1.25rem;
-        overflow-x: auto;
 
         .catalog__item {
             display: flex;
@@ -71,6 +72,23 @@
     }
 }
 
+@media (max-width: 1300px) {
+    .container {
+        width: 100%;
+    }
+
+    .main {
+        .catalog__row {
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .catalog__row::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
 
 @media (max-width: 425px) {
     .main {
