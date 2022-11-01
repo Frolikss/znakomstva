@@ -1,4 +1,4 @@
-@import "variables";
+@use "../abstracts/variables" as *;
 
 @mixin header__login() {
     .header {

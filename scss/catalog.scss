@@ -1,11 +1,6 @@
-@import "_header";
-@import "_footer";
-@import "_variables";
-@import "_default.scss";
+@use "abstracts/" as *;
 
 @include header__login();
-
-
 
 .main {
     .catalog__col {
