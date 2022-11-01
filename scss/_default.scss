@@ -11,6 +11,7 @@ body {
 	color: #fff;
 	background: $color-bg;
     background: radial-gradient(circle at center bottom, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+    cursor: default;
 }
 
 button {
@@ -19,6 +20,10 @@ button {
     border: none;
     padding: 0;
     cursor: pointer;
+}
+
+input:focus {
+    outline: none;
 }
 
 .wrapper {

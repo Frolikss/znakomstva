@@ -36,6 +36,16 @@ body {
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
+
+            &_password {
+                position: relative;
+
+                .register__form-showpass {
+                    position: absolute;
+                    right: 5%;
+                    top: 30%;
+                }
+            }
         }
 
         .register__input {
@@ -54,6 +64,8 @@ body {
 
         .register__input_icon {
             text-indent: 3rem;
+            width: 100%;
+            position: relative;
 
             &:first-child {
                 background: url(/assets/svg/user.svg) no-repeat left 1rem center, $input-bg;
@@ -64,7 +76,7 @@ body {
             }
 
             &:last-of-type {
-                background: url(/assets/svg/password.svg) no-repeat left 1rem center, url(/assets/svg/eye.svg) no-repeat right 1rem center ,$input-bg;
+                background: url(/assets/svg/password.svg) no-repeat left 1rem center, $input-bg;
             }
         }
 
@@ -128,10 +140,9 @@ body {
 
         .register__create-button {
             color: #fff;
-            background: linear-gradient(90deg, #EE0979, #FF6A00);
+            background: $button-bg;
             box-shadow: 0 5px 50px rgba(238, 9, 121, .2),
                         0 5px 50px rgba(255, 106, 0, .2);
-            z-index: -1;
         }
     }
 }

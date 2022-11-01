@@ -92,6 +92,10 @@
 
     @media (max-width: 500px) {
         .header {
+            .header__row {
+                justify-content: space-around;
+            }
+
             .header__logo-image {
                 width: 2.5rem;
             }
@@ -105,13 +109,49 @@
             }
 
             .header__search-svg {
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 1.875rem;
+                height: 1.875rem;
             }
 
             .header__bell-svg {
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 1.875rem;
+                height: 1.875rem;
+            }
+
+            .header__burger {
+                display: block;
+                position: relative;
+                width: 1.875rem;
+                height: 1.5625rem;
+            }
+        
+            .header__burger::before,
+            .header__burger::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                left: 0;
+                background: $button-bg;
+                height: 3px;
+                border-radius: 6.25rem;
+            }
+        
+            .header__burger span {
+                position: absolute;
+                background: $button-bg;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                top: 11px;
+                border-radius: 6.25rem;
+            }
+        
+            .header__burger::before {
+                top: 0;
+            }
+        
+            .header__burger::after {
+                bottom: 0;
             }
         }
     }
@@ -199,6 +239,10 @@
     }
 
     .header__menu_login {
+        display: none;
+    }
+
+    .header__burger {
         display: none;
     }
 }
