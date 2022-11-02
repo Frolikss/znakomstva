@@ -471,6 +471,7 @@ main {
 }
 .settings__gender_radio:last-child:checked {
   background: url(/assets/svg/female.svg) no-repeat center, #056bda;
+  border: none;
 }
 .settings__password {
   position: relative;
