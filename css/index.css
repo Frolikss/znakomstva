@@ -13,6 +13,8 @@ body {
 }
 
 button {
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
   color: #fff;
   background: none;
   border: none;
@@ -268,7 +270,7 @@ select:focus {
   padding: 1.4375rem 0;
   border-radius: 6.25rem;
   background: linear-gradient(90deg, #ee0979, #ff6a00);
-  box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
   z-index: -1;
   margin: 0 0 1.25rem 0;
 }
