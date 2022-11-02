@@ -469,6 +469,7 @@ select:focus {
 @media (max-width: 500px) {
   .header {
     background: none;
+    z-index: 1;
   }
   .header__bell-svg path, .header__search path {
     fill: #42204e;
@@ -513,7 +514,6 @@ select:focus {
     height: 100vh;
     border-radius: 0;
     background-size: cover;
-    z-index: -1;
   }
   .profile__photo-buttons {
     display: flex;
