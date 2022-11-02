@@ -1,11 +1,14 @@
 @use "abstracts/" as *;
+@use "layouts/" as *;
 
 @include header__logout();
 
 .main {
     min-height: calc(100vh - 6.875rem - 4.6875rem);
+}
 
-    .login__row {
+.login {
+    &__row {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -13,28 +16,28 @@
         max-width: 72%;
     }
 
-    .login__header {
-        font-size: 3.75rem;
+    &__header {
+        font-size: 3.75em;
         font-weight: 500;
         text-align: center;
         margin: 0 0 0.625em 0;
     }
 
-    .login__text {
+    &__text {
         text-align: center;
         line-height: 150%;
     }
 
-    .login__form {
+    &__form {
         width: 50%;
         margin: 3.125rem 0 0;
 
-        .login__form__row {
+        &__row {
             display: flex;
             flex-direction: column;
         }
 
-        .login__form-input {
+        &-input {
             width: 100%;
             color: #8b5d9a;
             border: none;
@@ -54,17 +57,17 @@
             }
         }
 
-        .login__form_password {
+        &_password {
             position: relative;
         }
 
-        .login__form-showpass {
+        &-showpass {
             position: absolute;
             right: 5%;
-            top: 30%;
+            top: 29%;
         }
 
-        .login__form-button {
+        &-button {
             width: 100%;
             padding: 1.4375rem 0;
             border-radius: 6.25rem;
@@ -74,9 +77,9 @@
             margin: 0 0 1.25rem 0;
         }
 
-        .login__form-button-forget {
+        &-button-forget {
             width: 100%;
-            font-size: 0.875rem;
+            font-size: 0.875em;
             align-self: center;
             color: #925fa4;
         }
@@ -91,10 +94,10 @@
 
     .main {
         min-height: calc(100vh - 6.875rem - 10.9375rem);
+    }
 
-        .container {
-            padding: 1rem;
-        }
+    .container {
+        padding: 1rem;
     }
 }
 
@@ -103,20 +106,23 @@
         top: 50%;
     }
 
-    .main .login__header {
-        font-size: 2.25rem;
-    }
+    .login {
+        &__header {
+            font-size: 2.25em;
+        }
 
-    .main .login__form {
-        width: 100%;
+        &__form {
+            width: 100%;
+        }
     }
 }
 
 @media (max-width: 600px) {
     .main {
         min-height: calc(100vh - 9.5rem - 10.9375rem);
-
-        .login__row {
+    }
+    .login {
+        &__row {
             max-width: 90%;
         }
     }

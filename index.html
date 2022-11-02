@@ -164,13 +164,10 @@
                             d="M10.9247 11.7383L11.0239 12.0359L11.3376 12.0382C11.3782 12.0386 11.395 12.0903 11.3624 12.1145L11.1101 12.3009L11.2047 12.5999C11.217 12.6386 11.1729 12.6707 11.1398 12.6471L10.8846 12.4647L10.6295 12.6471C10.5964 12.6707 10.5524 12.6386 10.5646 12.5999L10.6592 12.3009L10.4069 12.1145C10.3742 12.0903 10.391 12.0386 10.4317 12.0382L10.7453 12.0359L10.8446 11.7383C10.8574 11.6998 10.9118 11.6998 10.9247 11.7383Z"
                             fill="#F5F5F5" />
                     </svg>
-                    <p class="header__country-name">Америка</p>
-                    <button class="header__country-button">
-                        <svg class="header__arrow-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="6"
-                            viewBox="0 0 10 6" fill="none">
-                            <path d="M1.5 0.833344L5 4.33334L8.5 0.833344" stroke="white" stroke-linecap="square" />
-                        </svg>
-                    </button>
+                    <select class="header__country-select">
+                        <option value="us">Америка</option>
+                        <option value="ua">Украина</option>
+                    </select>
                 </div>
             </div>
             <div class="container">
@@ -239,51 +236,49 @@
             </svg>
         </div>
         <main class="main">
-            <div class="container">
-                <section class="login">
-                    <div class="container">
-                        <div class="login__row">
-                            <h1 class="login__header">Знакомства без преград</h1>
-                            <p class="login__text">
-                                Для современного мира сплочённость команды профессионалов однозначно фиксирует
-                                необходимость системы обучения кадров, соответствующей насущным потребностям.
-                            </p>
-                            <form action="/views/catalog.html" method="get" class="login__form">
-                                <input class="login__form-input" type="email" name="email"
-                                    placeholder="Введите электронную почту">
-                                <div class="login__form_password">
-                                    <input class="login__form-input login__form-input_button" type="password"
-                                        name="password" placeholder="Введите пароль">
-                                    <button class="login__form-showpass">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_5_21)">
-                                                <path
-                                                    d="M19.8507 9.60918C19.6722 9.41004 15.3782 4.72656 10 4.72656C4.62181 4.72656 0.32791 9.41004 0.149355 9.60918C-0.0497851 9.83176 -0.0497851 10.1682 0.149355 10.3908C0.32791 10.59 4.62189 15.2734 10 15.2734C15.3781 15.2734 19.6721 10.59 19.8507 10.3908C20.0498 10.1682 20.0498 9.83176 19.8507 9.60918ZM10 14.1016C7.73865 14.1016 5.89845 12.2614 5.89845 10C5.89845 7.73863 7.73865 5.89844 10 5.89844C12.2614 5.89844 14.1016 7.73863 14.1016 10C14.1016 12.2614 12.2614 14.1016 10 14.1016Z"
-                                                    fill="#8B5D9A" />
-                                                <path
-                                                    d="M10.5859 8.82812C10.5859 8.23867 10.8786 7.72012 11.3237 7.40117C10.9243 7.19668 10.4787 7.07031 10 7.07031C8.38465 7.07031 7.07031 8.38465 7.07031 10C7.07031 11.6154 8.38465 12.9297 10 12.9297C11.4462 12.9297 12.6433 11.8737 12.8798 10.4938C11.6998 10.8737 10.5859 9.98133 10.5859 8.82812Z"
-                                                    fill="#8B5D9A" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_5_21">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <button class="login__form-button">
-                                    Войти
+            <section class="login">
+                <div class="container">
+                    <div class="login__row">
+                        <h1 class="login__header">Знакомства без преград</h1>
+                        <p class="login__text">
+                            Для современного мира сплочённость команды профессионалов однозначно фиксирует
+                            необходимость системы обучения кадров, соответствующей насущным потребностям.
+                        </p>
+                        <form action="/views/catalog.html" method="get" class="login__form">
+                            <input class="login__form-input" type="email" name="email"
+                                placeholder="Введите электронную почту">
+                            <div class="login__form_password">
+                                <input class="login__form-input login__form-input_button" type="password"
+                                    name="password" placeholder="Введите пароль">
+                                <button class="login__form-showpass">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_5_21)">
+                                            <path
+                                                d="M19.8507 9.60918C19.6722 9.41004 15.3782 4.72656 10 4.72656C4.62181 4.72656 0.32791 9.41004 0.149355 9.60918C-0.0497851 9.83176 -0.0497851 10.1682 0.149355 10.3908C0.32791 10.59 4.62189 15.2734 10 15.2734C15.3781 15.2734 19.6721 10.59 19.8507 10.3908C20.0498 10.1682 20.0498 9.83176 19.8507 9.60918ZM10 14.1016C7.73865 14.1016 5.89845 12.2614 5.89845 10C5.89845 7.73863 7.73865 5.89844 10 5.89844C12.2614 5.89844 14.1016 7.73863 14.1016 10C14.1016 12.2614 12.2614 14.1016 10 14.1016Z"
+                                                fill="#8B5D9A" />
+                                            <path
+                                                d="M10.5859 8.82812C10.5859 8.23867 10.8786 7.72012 11.3237 7.40117C10.9243 7.19668 10.4787 7.07031 10 7.07031C8.38465 7.07031 7.07031 8.38465 7.07031 10C7.07031 11.6154 8.38465 12.9297 10 12.9297C11.4462 12.9297 12.6433 11.8737 12.8798 10.4938C11.6998 10.8737 10.5859 9.98133 10.5859 8.82812Z"
+                                                fill="#8B5D9A" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_5_21">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
                                 </button>
-                                <button class="login__form-button-forget">
-                                    Я не помню пароль
-                                </button>
-                            </form>
-                        </div>
+                            </div>
+                            <button class="login__form-button">
+                                Войти
+                            </button>
+                            <button class="login__form-button-forget">
+                                Я не помню пароль
+                            </button>
+                        </form>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
         <div class="blob-right">
             <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"

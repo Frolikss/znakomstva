@@ -1,15 +1,16 @@
 @use "abstracts/" as *;
+@use "layouts/" as *;
 
 @include header__login();
 
 .main {
     min-height: calc(100vh - 10.625rem - 4.6875rem);
+}
 
-    .profile {
-        margin: 1rem 0 0 0;
-    }
+.profile {
+    margin: 1rem 0 0 0;
 
-    .profile__changer {
+    &__changer {
         align-self: center;
         background: linear-gradient(#2d1436, #2d1436) padding-box,
             linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
@@ -18,193 +19,197 @@
         padding: 1.25rem 1.3rem 1.1rem;
     }
 
-    .profile__col {
+    &__col {
         display: flex;
         gap: 1.875rem;
     }
-}
 
-.profile__block {
-    display: grid;
-    grid-template-areas:
-        "photo head"
-        "photo data"
-        "photo text"
-        "subphoto text"
-        "subphoto regdate";
-    gap: 0 1.875rem;
+    &__block {
+        display: grid;
+        grid-template-areas:
+            "photo head"
+            "photo data"
+            "photo text"
+            "subphoto text"
+            "subphoto regdate";
+        gap: 0 1.875rem;
+    }
 
-    .profile__row_photo {
+    &__row_photo {
         grid-area: photo;
+    }
 
-        .profile__photo {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 31.25rem;
-            width: 23.75rem;
-            border-radius: 3.125rem;
-            background: url(/assets/png/profile__0.png) no-repeat;
-            margin: 0 0 0.625rem 0;
-        }
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 31.25rem;
+        width: 23.75rem;
+        border-radius: 3.125rem;
+        background: url(/assets/png/profile__0.png) no-repeat;
+        margin: 0 0 0.625rem 0;
 
-        .profile__bookmark {
-            padding: 1.875rem;
-            align-self: flex-start;
-        }
-
-        .profile__photo-buttons {
+        &-buttons {
             margin: 0 auto;
-        }
-
-        .profile__like,
-        .profile__close {
-            margin: 0 auto 1.875rem;
-            padding: 1.3rem 1.125rem 1rem;
-            border-radius: 3.125rem;
-            width: 3.75rem;
-            background: $button-bg;
-        }
-
-        .profile__close {
-            display: none;
-            background: linear-gradient(90deg, #0575e6 0%, #021b79 100%);
         }
     }
 
-    .profile__subphotos {
+    &__bookmark {
+        padding: 1.875rem;
+        align-self: flex-start;
+    }
+
+    &__like,
+    &__close {
+        margin: 0 auto 1.875rem;
+        padding: 1.3rem 1.125rem 1rem;
+        border-radius: 3.125rem;
+        width: 3.75rem;
+        background: $button-bg;
+    }
+
+    &__close {
+        display: none;
+        background: linear-gradient(90deg, #0575e6 0%, #021b79 100%);
+    }
+
+    &__subphotos {
         display: flex;
         justify-content: space-between;
         align-items: center;
         grid-area: subphoto;
     }
 
-    .profile__subphotos > * {
+    &__subphotos > * {
         width: 5.5625rem;
         height: 5.5625rem;
     }
 
-    .profile__head {
+    &__head {
         display: flex;
         flex-direction: column;
         gap: 0.625rem;
-        font-size: 2rem;
+        font-size: 2em;
         grid-area: head;
-
-        .profile__header-row {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .profile__status {
-            align-self: flex-start;
-        }
-
-        .profile__button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 13.75rem;
-            gap: 0.625rem;
-            font-size: 0.875rem;
-            background: $button-bg;
-            border-radius: 6.25rem;
-            padding: 0.875rem 1.875rem;
-        }
     }
 
-    .profile__data {
+    &__header-row {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    &__status {
+        box-shadow: 0px 4px 20px #33e159;
+        align-self: flex-start;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13.75rem;
+        gap: 0.625rem;
+        font-size: 0.875rem;
+        background: $button-bg;
+        border-radius: 6.25rem;
+        padding: 0.875rem 1.875rem;
+    }
+
+    &__data {
         display: flex;
         flex-direction: column;
         gap: 1.875rem;
         grid-area: data;
+    }
 
-        .profile__table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 0.625em;
-            font-weight: 400;
-        }
+    &__table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 0.625em;
+        font-weight: 400;
 
-        .profile__table-row {
+        &-row {
             background: url(/assets/svg/lines.svg) no-repeat center;
         }
 
-        .profile__table-row:first-child {
-            font-size: 1.125rem;
+        &-row:first-child {
+            font-size: 1.125em;
             font-weight: 500;
         }
 
-        .profile__table-col:last-child {
+        &-col:last-child {
             text-align: end;
+            position: relative;
         }
     }
 
-    .profile__text {
+    &__text {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         grid-area: text;
     }
 
-    .profile__name {
-        font-size: 1.125rem;
+    &__name {
+        font-size: 1.125em;
         font-weight: 500;
     }
 
-    .profile__par {
+    &__par {
         font-weight: 400;
         line-height: 150%;
     }
 
-    .profile__regdate {
+    &__regdate {
         grid-area: regdate;
         color: #8b5d9a;
     }
 }
 
 @media (max-width: 1055px) {
-    .profile__changer {
-        display: none;
+    .profile {
+        &__changer {
+            display: none;
+        }
     }
 }
 
 @media (max-width: 850px) {
-    .profile__block {
-        .profile__text {
-            font-size: 12px;
+    .profile {
+        &__text {
+            font-size: 0.75em;
         }
     }
 }
 
 @media (max-width: 768px) {
-    .profile__block {
-        grid-template-areas:
-            "photo"
-            "photo"
-            "text"
-            "head"
-            "subphoto"
-            "data"
-            "regdate";
-        gap: 2rem;
+    .profile {
+        &__block {
+            grid-template-areas:
+                "photo"
+                "photo"
+                "text"
+                "head"
+                "subphoto"
+                "data"
+                "regdate";
+            gap: 2rem;
+        }
 
-        .profile__row_photo {
+        &__row_photo {
             margin: 0 auto;
         }
 
-        .profile__head {
-            .profile__header-row {
-                display: none;
-            }
-
-            .profile__button {
-                width: auto;
-            }
+        &__header-row {
+            display: none;
         }
 
-        .profile__text {
-            font-size: 1rem;
+        &__button {
+            width: auto;
+        }
+
+        &__text {
+            font-size: 1em;
             gap: 1.5rem;
         }
     }
@@ -214,80 +219,76 @@
     .header {
         background: none;
 
-        .header__bell-svg path,
-        .header__search path {
+        &__bell-svg path,
+        &__search path {
             fill: #42204e;
         }
     }
 
-    .main {
-        .container {
-            padding: 0;
+    .container {
+        padding: 0;
+    }
+
+    .profile {
+        margin: 0;
+
+        &__subphotos,
+        &__head,
+        &__data,
+        &__text,
+        &__regdate {
+            padding: 0 1rem;
         }
 
-        .profile {
-            margin: 0;
-
-            .profile__subphotos,
-            .profile__head,
-            .profile__data,
-            .profile__text,
-            .profile__regdate {
-                padding: 0 1rem;
-            }
-
-            .profile__regdate {
-                font-size: 0.875rem;
-            }
+        &__regdate {
+            font-size: 0.875em;
         }
     }
 
-    .profile__block {
-        .profile__head {
-            .profile__button {
-                padding: 1.4375rem 1.875rem;
-            }
+    &__head {
+        .profile__button {
+            padding: 1.4375rem 1.875rem;
         }
+    }
 
-        .profile__subphotos {
-            display: flex;
-            gap: 0.5rem;
-            overflow-x: auto;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+    &__subphotos {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 
-        .profile__subphotos::-webkit-scrollbar {
+    &__subphotos::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__row_photo {
+        width: 100%;
+        height: calc(100vh - 7.5rem);
+
+        .profile__bookmark {
             display: none;
         }
 
-        .profile__row_photo {
+        .profile__photo {
+            position: relative;
+            top: -20%;
+            justify-content: flex-end;
             width: 100%;
-            height: calc(100vh - 7.5rem);
+            height: 100vh;
+            border-radius: 0;
+            background-size: cover;
+            z-index: -1;
+        }
 
-            .profile__bookmark {
-                display: none;
-            }
+        .profile__photo-buttons {
+            display: flex;
+            gap: 1rem;
+        }
 
-            .profile__photo {
-                position: relative;
-                top: -20%;
-                justify-content: flex-end;
-                width: 100%;
-                height: 100vh;
-                border-radius: 0;
-                background-size: cover;
-                z-index: -1;
-            }
-
-            .profile__photo-buttons {
-                display: flex;
-                gap: 1rem;
-            }
-
-            .profile__close {
-                display: block;
-            }
+        .profile__close {
+            display: block;
         }
     }
 }

@@ -1,0 +1,324 @@
+@use "abstracts/" as *;
+@use "layouts/" as *;
+
+@include header__login();
+
+main {
+    min-height: calc(100vh - 10.625rem - 4.6875rem);
+}
+
+.settings {
+    margin: 1rem 0 0 0;
+    width: 100%;
+
+    &__row {
+        display: flex;
+        gap: 1.25rem;
+    }
+
+    &__tab {
+        align-self: flex-start;
+        background: #1c0a22;
+        border-radius: 1.875rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 23%;
+        gap: 1.25rem;
+        padding: 1.875rem 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 0 1.875rem;
+
+        &_select {
+            display: none;
+        }
+
+        &_active {
+            background: linear-gradient(#1c0a22, #1c0a22) padding-box,
+                linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+            border-left: 2px solid transparent;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 80%;
+        gap: 1.25rem;
+    }
+
+    &__header {
+        font-size: 1.75em;
+    }
+
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 0 1 30%;
+        max-width: 35%;
+        &_image {
+            object-fit: cover;
+            border-radius: 3.125rem;
+            max-height: 80%;
+            flex: 0 1 30%;
+        }
+    }
+
+    &__add {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        &-item {
+            flex: 1;
+            width: 1.875rem;
+            height: 1.875rem;
+            border: 1px solid #925fa4;
+            border-radius: 1.875rem;
+            padding: 1.875rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        font-size: 1.125em;
+        line-height: 150%;
+        font-weight: 500;
+    }
+
+    &__label {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__input {
+        color: #8B5D9A;
+        border: none;
+        border-radius: 6.25rem;
+        background: #42204e;
+        padding: 1.4375rem 0;
+        max-width: 60%;
+        flex: 1;
+        text-indent: 1.5rem;
+
+        &::placeholder {
+            font-family: "Rubik", sans-serif;
+            color: #8b5d9a;
+        }
+    }
+
+    &__date {
+        display: flex;
+        gap: 0.3125rem;
+        width: 60%;
+        text-align: center;
+        text-indent: 0rem;
+
+        & > * {
+            text-indent: 0;
+            text-align: center;
+        }
+
+        &-month {
+            flex: 20%;
+            text-align: left;
+            text-indent: 1.5rem;
+        }
+    }
+
+    &__textarea {
+        border-radius: 3rem;
+        resize: none;
+    }
+
+    &__select {
+        appearance: none;
+        background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, #42204e;
+    }
+
+    &__gender {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+
+        &_radio {
+            flex: 1;
+            appearance: none;
+            border-radius: 6.25rem;
+            padding: 2rem;
+            background: url(/assets/svg/male.svg) no-repeat center;
+            border: 1px solid #ee0d88;
+            &:checked {
+                background: url(/assets/svg/male.svg) no-repeat center, #056bda;
+                border: none;
+            }
+
+            &:last-child:checked {
+                background: url(/assets/svg/female.svg) no-repeat center, #056bda;
+            }
+        }
+    }
+
+    &__password {
+        position: relative;
+
+        &_showpass {
+            position: absolute;
+            right: 5%;
+            top: 35%;
+        }
+    }
+
+    &__save {
+        align-self: flex-end;
+        width: 50%;
+        padding: 1.4375rem 0;
+        border-radius: 6.25rem;
+        background: $button-bg;
+        margin: 1rem 0 1.25rem 0;
+    }
+
+    @media (max-width: 1200px) {
+       &__add {
+        &-item {
+            padding: 1.875rem 1rem;
+        }
+       } 
+    }
+
+    @media (max-width: 1024px) {
+        &__add {
+            &-item:last-child {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 920px) {
+        &__photo {
+            align-self: center;
+            max-width: 100%;
+        }
+
+        &__add {
+            &-item {
+                padding: 2rem;
+            }
+
+            &-item:last-child {
+                display: block;
+            }
+        }
+
+        &__row {
+            flex-direction: column;
+        }
+
+        &__tab {
+            justify-content: space-around;
+            flex-direction: row;
+            width: 100%;
+            padding: 0;
+        }
+
+        &__item {
+            padding: 0;
+
+            &_active {
+                padding: 1.875rem 0;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+        }
+
+        &__save {
+            align-self: center;
+        }
+
+        @media (max-width: 620px) {
+            &__tab {
+                &-svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                &-link {
+                    display: none;
+                }
+            }
+
+            &__form {
+                &-item {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+            }
+
+            &__input {
+                max-width: 100%;
+            }
+
+            &__date {
+                width: 100%;
+            }
+
+            &__gender {
+                width: 100%;
+            }
+
+            &__label {
+                font-size: 0.75em;
+                text-indent: 1.5rem;
+                color: #6E447B;
+            }
+
+            &__password {
+                &_showpass {
+                    top: 55%;
+                }
+            }
+
+            &__save {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 425px) {
+        &__item {
+            display: none;
+
+            &_select {
+                font-size: 1rem;
+                line-height: 150%;
+                display: block;
+                width: 100%;
+                color: #fff;
+                background: linear-gradient($color-bg, $color-bg) padding-box,
+                            linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+                border-radius: 10rem;
+                border: 1px solid transparent;
+                padding: 1.125rem 1.875rem;
+            }
+        }
+    }
+}

@@ -24,7 +24,7 @@
             gap: 3.125rem;
         }
 
-        .active {
+        &__list_active {
             color: #fe6703;
             background: linear-gradient(#2d1436, #2d1436) padding-box,
                 linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
@@ -33,7 +33,7 @@
         }
 
         .header__menu-select {
-            font-size: 1rem;
+            font-size: 1em;
             color: #fff;
             background: none;
             border: none;
@@ -179,6 +179,13 @@
 }
 
 .header {
+    &__country-select {
+        font-size: 1em;
+        color: #fff;
+        background: none;
+        border: none;
+    }
+
     .header__country {
         display: flex;
         justify-content: center;
@@ -189,7 +196,7 @@
     }
 
     .header__country-text {
-        font-size: 1rem;
+        font-size: 1em;
         text-transform: uppercase;
     }
 
@@ -228,7 +235,7 @@
     }
 
     .header__login-link {
-        font-size: 1rem;
+        font-size: 1em;
         color: #fff;
         text-decoration: none;
         background: linear-gradient($color-bg, $color-bg) padding-box,

@@ -8,7 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #230E2B;
-  background: radial-gradient(circle at center bottom, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+  background: radial-gradient(circle at center bottom, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
   cursor: default;
 }
 
@@ -21,6 +21,10 @@ button {
 }
 
 input:focus {
+  outline: none;
+}
+
+select:focus {
   outline: none;
 }
 
@@ -66,6 +70,12 @@ input:focus {
   position: relative;
 }
 
+.header__country-select {
+  font-size: 1em;
+  color: #fff;
+  background: none;
+  border: none;
+}
 .header .header__country {
   display: flex;
   justify-content: center;
@@ -75,7 +85,7 @@ input:focus {
   gap: 1em;
 }
 .header .header__country-text {
-  font-size: 1rem;
+  font-size: 1em;
   text-transform: uppercase;
 }
 .header .header__country-row {
@@ -107,7 +117,7 @@ input:focus {
   gap: 1rem;
 }
 .header .header__login-link {
-  font-size: 1rem;
+  font-size: 1em;
   color: #fff;
   text-decoration: none;
   background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
@@ -123,7 +133,7 @@ input:focus {
 }
 
 .footer {
-  font-size: 0.875rem;
+  font-size: 0.875em;
   padding: 1.875rem;
 }
 .footer .footer__row {
@@ -148,14 +158,16 @@ input:focus {
     align-items: center;
   }
   .footer .footer__menu {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     white-space: nowrap;
   }
-  .footer .footer__politics, .footer .footer__menu, .footer .footer__lang {
+  .footer .footer__politics,
+.footer .footer__menu,
+.footer .footer__lang {
     margin: 0 0 1.25rem 0;
   }
   .footer .footer__copyright {
-    font-size: 0.875rem;
+    font-size: 0.875em;
   }
 }
 @media (max-width: 500px) {
@@ -168,7 +180,7 @@ input:focus {
 }
 @media (max-width: 400px) {
   .footer {
-    font-size: 10px;
+    font-size: 0.625em;
   }
   .footer .footer__list {
     gap: 0.3rem;
@@ -192,32 +204,33 @@ input:focus {
 .main {
   min-height: calc(100vh - 6.875rem - 4.6875rem);
 }
-.main .login__row {
+
+.login__row {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   max-width: 72%;
 }
-.main .login__header {
-  font-size: 3.75rem;
+.login__header {
+  font-size: 3.75em;
   font-weight: 500;
   text-align: center;
   margin: 0 0 0.625em 0;
 }
-.main .login__text {
+.login__text {
   text-align: center;
   line-height: 150%;
 }
-.main .login__form {
+.login__form {
   width: 50%;
   margin: 3.125rem 0 0;
 }
-.main .login__form .login__form__row {
+.login__form__row {
   display: flex;
   flex-direction: column;
 }
-.main .login__form .login__form-input {
+.login__form-input {
   width: 100%;
   color: #8b5d9a;
   border: none;
@@ -227,30 +240,30 @@ input:focus {
   margin: 0 0 0.625rem 0;
   background: url(/assets/svg/message.svg) no-repeat left 1rem center, #42204E;
 }
-.main .login__form .login__form-input::-moz-placeholder {
+.login__form-input::-moz-placeholder {
   font-family: "Rubik", sans-serif;
   color: #8b5d9a;
 }
-.main .login__form .login__form-input:-ms-input-placeholder {
+.login__form-input:-ms-input-placeholder {
   font-family: "Rubik", sans-serif;
   color: #8b5d9a;
 }
-.main .login__form .login__form-input::placeholder {
+.login__form-input::placeholder {
   font-family: "Rubik", sans-serif;
   color: #8b5d9a;
 }
-.main .login__form .login__form-input_button {
+.login__form-input_button {
   background: url(/assets/svg/password.svg) no-repeat left 1rem center, #42204E;
 }
-.main .login__form .login__form_password {
+.login__form_password {
   position: relative;
 }
-.main .login__form .login__form-showpass {
+.login__form-showpass {
   position: absolute;
   right: 5%;
-  top: 30%;
+  top: 29%;
 }
-.main .login__form .login__form-button {
+.login__form-button {
   width: 100%;
   padding: 1.4375rem 0;
   border-radius: 6.25rem;
@@ -259,9 +272,9 @@ input:focus {
   z-index: -1;
   margin: 0 0 1.25rem 0;
 }
-.main .login__form .login__form-button-forget {
+.login__form-button-forget {
   width: 100%;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   align-self: center;
   color: #925fa4;
 }
@@ -274,7 +287,7 @@ input:focus {
   .main {
     min-height: calc(100vh - 6.875rem - 10.9375rem);
   }
-  .main .container {
+  .container {
     padding: 1rem;
   }
 }
@@ -282,10 +295,10 @@ input:focus {
   .blob-right {
     top: 50%;
   }
-  .main .login__header {
-    font-size: 2.25rem;
+  .login__header {
+    font-size: 2.25em;
   }
-  .main .login__form {
+  .login__form {
     width: 100%;
   }
 }
@@ -293,7 +306,7 @@ input:focus {
   .main {
     min-height: calc(100vh - 9.5rem - 10.9375rem);
   }
-  .main .login__row {
+  .login__row {
     max-width: 90%;
   }
 }

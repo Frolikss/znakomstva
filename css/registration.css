@@ -8,7 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #230E2B;
-  background: radial-gradient(circle at center bottom, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+  background: radial-gradient(circle at center bottom, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
   cursor: default;
 }
 
@@ -21,6 +21,10 @@ button {
 }
 
 input:focus {
+  outline: none;
+}
+
+select:focus {
   outline: none;
 }
 
@@ -66,6 +70,12 @@ input:focus {
   position: relative;
 }
 
+.header__country-select {
+  font-size: 1em;
+  color: #fff;
+  background: none;
+  border: none;
+}
 .header .header__country {
   display: flex;
   justify-content: center;
@@ -75,7 +85,7 @@ input:focus {
   gap: 1em;
 }
 .header .header__country-text {
-  font-size: 1rem;
+  font-size: 1em;
   text-transform: uppercase;
 }
 .header .header__country-row {
@@ -107,7 +117,7 @@ input:focus {
   gap: 1rem;
 }
 .header .header__login-link {
-  font-size: 1rem;
+  font-size: 1em;
   color: #fff;
   text-decoration: none;
   background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
@@ -123,7 +133,7 @@ input:focus {
 }
 
 .footer {
-  font-size: 0.875rem;
+  font-size: 0.875em;
   padding: 1.875rem;
 }
 .footer .footer__row {
@@ -148,14 +158,16 @@ input:focus {
     align-items: center;
   }
   .footer .footer__menu {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     white-space: nowrap;
   }
-  .footer .footer__politics, .footer .footer__menu, .footer .footer__lang {
+  .footer .footer__politics,
+.footer .footer__menu,
+.footer .footer__lang {
     margin: 0 0 1.25rem 0;
   }
   .footer .footer__copyright {
-    font-size: 0.875rem;
+    font-size: 0.875em;
   }
 }
 @media (max-width: 500px) {
@@ -168,7 +180,7 @@ input:focus {
 }
 @media (max-width: 400px) {
   .footer {
-    font-size: 10px;
+    font-size: 0.625em;
   }
   .footer .footer__list {
     gap: 0.3rem;
@@ -191,88 +203,88 @@ input:focus {
 }
 body {
   background: #230E2B;
-  background: radial-gradient(circle at 40% top, #381A42 0%, #230E2B 60%) no-repeat, #230E2B;
+  background: radial-gradient(circle at 40% top, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
 }
 
 .main {
   min-height: calc(100vh - 6.875rem - 4.6875rem);
-  align-items: stretch;
 }
-.main .register__text {
+
+.register__text {
   font-size: 2.25em;
   text-align: center;
   margin: 0 0 0.625rem 0;
 }
-.main .register__subtext {
-  color: #6E447B;
+.register__subtext {
+  color: #6e447b;
   margin: 0 0 1.875rem 0;
   text-align: center;
 }
-.main .register__row {
+.register__row {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
 }
-.main .register__row .register__form {
+.register__form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-.main .register__row .register__form_password {
+.register__form_password {
   position: relative;
 }
-.main .register__row .register__form_password .register__form-showpass {
+.register__form_showpass {
   position: absolute;
   right: 5%;
-  top: 30%;
+  top: 35%;
 }
-.main .register__row .register__input {
+.register__input {
   text-indent: 1em;
   padding: 1.4375rem 0;
   border: 0;
   border-radius: 6.25rem;
   background: #42204E;
-  color: #8B5D9A;
+  color: #8b5d9a;
 }
-.main .register__row .register__input::-moz-placeholder {
+.register__input::-moz-placeholder {
   font-family: "Rubik", sans-serif;
-  color: #8B5D9A;
+  color: #8b5d9a;
 }
-.main .register__row .register__input:-ms-input-placeholder {
+.register__input:-ms-input-placeholder {
   font-family: "Rubik", sans-serif;
-  color: #8B5D9A;
+  color: #8b5d9a;
 }
-.main .register__row .register__input::placeholder {
+.register__input::placeholder {
   font-family: "Rubik", sans-serif;
-  color: #8B5D9A;
+  color: #8b5d9a;
 }
-.main .register__row .register__input_icon {
+.register__input_icon {
   text-indent: 3rem;
   width: 100%;
   position: relative;
 }
-.main .register__row .register__input_icon:first-child {
+.register__input_icon:first-child {
   background: url(/assets/svg/user.svg) no-repeat left 1rem center, #42204E;
 }
-.main .register__row .register__input_icon:nth-of-type(2) {
+.register__input_icon:nth-of-type(2) {
   background: url(/assets/svg/message.svg) no-repeat left 1rem center, #42204E;
 }
-.main .register__row .register__input_icon:last-of-type {
+.register__input_icon:last-of-type {
   background: url(/assets/svg/password.svg) no-repeat left 1rem center, #42204E;
 }
-.main .register__row .register__date {
+.register__date {
   display: flex;
   gap: 0.3125rem;
   width: 100%;
 }
-.main .register__row .register__gender {
+.register__gender {
   display: flex;
   justify-content: space-around;
 }
-.main .register__row .register__gender .gender {
+.register__gender_radio {
   padding: 2em;
-  border: 1px solid #EE0D88;
+  border: 1px solid #ee0d88;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -280,47 +292,49 @@ body {
   width: 50%;
   background: url(/assets/svg/male.svg) no-repeat center;
 }
-.main .register__row .register__gender .gender:last-child {
+.register__gender_radio:last-child {
   background: url(/assets/svg/female.svg) no-repeat center;
 }
-.main .register__row .register__gender .gender:first-child:checked {
-  background: url(/assets/svg/male.svg) no-repeat center, #056BDA;
+.register__gender_radio:first-child:checked {
+  background: url(/assets/svg/male.svg) no-repeat center, #056bda;
   border: none;
 }
-.main .register__row .register__gender .gender:last-child:checked {
-  background: url(/assets/svg/female.svg) no-repeat center, #056BDA;
+.register__gender_radio:last-child:checked {
+  background: url(/assets/svg/female.svg) no-repeat center, #056bda;
   border: none;
 }
-.main .register__row .register__day {
-  font-size: 0.875rem;
-  color: #6E447B;
+.register__day {
+  font-size: 0.875em;
+  color: #6e447b;
 }
-.main .register__row .register__input-day, .main .register__row .register__input-month, .main .register__row .register__input-year {
+.register__input-day, .register__input-month, .register__input-year {
   padding: 1.4375rem;
   text-indent: 0;
 }
-.main .register__row .register__input-day, .main .register__row .register__input-year {
+.register__input-day, .register__input-year {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   width: 25%;
   text-align: center;
 }
-.main .register__row .register__input-month {
+.register__input-month {
   width: 70%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, #42204E;
 }
-.main .register__row .register__create-button {
+.register__create-button {
+  flex-flow: "Rubik", sans-serif;
   color: #fff;
   background: linear-gradient(90deg, #ee0979, #ff6a00);
   box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
 }
 
 @media (max-width: 1024px) {
-  .blob-left, .blob-right {
+  .blob-left,
+.blob-right {
     top: 20%;
   }
   .main {
@@ -328,7 +342,7 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .wrapper .blob-left {
+  .blob-left {
     top: 45%;
   }
   .blob-right {
@@ -339,15 +353,15 @@ body {
   .main {
     min-height: calc(100vh - 9.5rem - 10.9375rem);
   }
-  .main .register__text {
-    font-size: 1.75rem;
+  .register__text {
+    font-size: 1.75em;
   }
 }
 @media (max-width: 340px) {
-  .main .register__input {
-    font-size: 0.75rem;
+  .register__input {
+    font-size: 0.75em;
   }
-  .main .register__row .register__input-month {
+  .register__input-month {
     width: 60%;
     background: #42204E;
   }

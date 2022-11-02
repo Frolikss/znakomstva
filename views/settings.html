@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/profile.css">
-    <title>Profile</title>
+    <link rel="stylesheet" href="/css/settings.css">
+    <title>Settings</title>
 </head>
 
 <body>
@@ -180,7 +180,7 @@
                     </div>
                     <ul class="header__list">
                         <li class="header__list-item">
-                            <a href="/views/catalog.html" class="header__list-link header__list_active">Анкеты</a>
+                            <a href="/views/catalog.html" class="header__list-link active">Анкеты</a>
                         </li>
                         <li class="header__list-item">
                             <a href="" class="header__list-link">Сообщения</a>
@@ -243,150 +243,225 @@
             </div>
         </header>
         <main class="main">
-            <section class="profile">
+            <section class="settings">
                 <div class="container">
-                    <div class="profile__col">
-                        <button class="profile__changer">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.5 22.5L10 15L17.5 7.5" stroke="white" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </button>
-                        <div class="profile__block">
-                            <div class="profile__row_photo">
-                                <div class="profile__photo">
-                                    <button class="profile__bookmark">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_17_3924)">
-                                                <path
-                                                    d="M3.39449 19.5H3.39466C3.51549 19.5 3.69176 19.4443 3.89209 19.2732L3.89323 19.2722L9.08384 14.8652C9.08402 14.865 9.0842 14.8648 9.08439 14.8647C9.3479 14.6399 9.69827 14.5299 10.0387 14.5299C10.3796 14.5299 10.7293 14.6402 10.993 14.8651L3.39449 19.5ZM3.39449 19.5C3.27043 19.5 3.15866 19.4422 3.08828 19.3413C3.01224 19.2321 2.9541 19.0765 2.9541 18.8639V1.69775C2.9541 1.07734 3.53573 0.5 4.22901 0.5H15.8332C16.5029 0.5 17.0452 1.05432 17.0452 1.69775V18.864C17.0452 19.1622 16.9623 19.3171 16.8953 19.3913C16.8289 19.4648 16.7426 19.5001 16.646 19.5001C16.534 19.5001 16.3776 19.4515 16.1678 19.2724L16.1673 19.2721L10.9935 14.8655L3.39449 19.5Z"
-                                                    stroke="#FF4B55" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_17_3924">
-                                                    <rect width="20" height="20" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </button>
-                                    <div class="profile__photo-buttons">
-                                        <button class="profile__close">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.7138 14.714L5.28574 5.28594" stroke="white"
-                                                    stroke-width="5" stroke-linecap="round" />
-                                                <path d="M14.7143 5.28594L5.28617 14.714" stroke="white"
-                                                    stroke-width="5" stroke-linecap="round" />
-                                            </svg>
-                                        </button>
-                                        <button class="profile__like">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10.0003 17.5L8.79199 16.421C4.50033 12.6035 1.66699 10.0858 1.66699 6.99591C1.66699 4.4782 3.68366 2.5 6.25033 2.5C7.70033 2.5 9.09199 3.16213 10.0003 4.20845C10.9087 3.16213 12.3003 2.5 13.7503 2.5C16.317 2.5 18.3337 4.4782 18.3337 6.99591C18.3337 10.0858 15.5003 12.6035 11.2087 16.4292L10.0003 17.5Z"
-                                                    fill="white" stroke="white" />
-                                            </svg>
-                                        </button>
+                    <div class="settings__row">
+                        <div class="settings__tab">
+                            <select name="tab" class="settings__item_select">
+                                <img src="/assets/svg/arrow.svg" alt="arrow" class="settings__item-arrow">
+                                <option value="">Профиль</option>
+                                <option value="">Избранное</option>
+                                <option value="">Личный счет</option>
+                                <option value="">Выйти</option>
+                            </select>
+                            <div class="settings__item settings__item_active">
+                                <svg class="settings__tab-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_52_928)">
+                                        <path
+                                            d="M9.8582 9.63406C11.1817 9.63406 12.3278 9.15936 13.2642 8.22278C14.2007 7.28635 14.6754 6.14057 14.6754 4.81688C14.6754 3.49364 14.2007 2.34771 13.2641 1.41097C12.3275 0.474699 11.1816 0 9.8582 0C8.5345 0 7.38872 0.474699 6.4523 1.41113C5.51587 2.34756 5.04102 3.49349 5.04102 4.81688C5.04102 6.14057 5.51587 7.2865 6.45245 8.22293C7.38903 9.1592 8.53496 9.63406 9.8582 9.63406V9.63406Z"
+                                            fill="url(#paint0_linear_52_928)" />
+                                        <path
+                                            d="M18.2862 15.379C18.2592 14.9893 18.2046 14.5642 18.1242 14.1152C18.043 13.663 17.9385 13.2354 17.8134 12.8446C17.6841 12.4407 17.5083 12.0419 17.291 11.6597C17.0655 11.2629 16.8006 10.9175 16.5034 10.6332C16.1926 10.3358 15.812 10.0967 15.372 9.92229C14.9334 9.7488 14.4474 9.66091 13.9276 9.66091C13.7234 9.66091 13.526 9.74468 13.1446 9.99294C12.91 10.146 12.6355 10.323 12.3291 10.5188C12.0671 10.6857 11.7121 10.8421 11.2738 10.9837C10.8461 11.1221 10.4118 11.1923 9.98318 11.1923C9.55456 11.1923 9.12045 11.1221 8.69229 10.9837C8.25437 10.8422 7.89945 10.6858 7.63776 10.5189C7.33427 10.325 7.05961 10.148 6.82142 9.99279C6.44056 9.74453 6.24296 9.66076 6.0388 9.66076C5.51878 9.66076 5.03295 9.7488 4.59456 9.92245C4.15481 10.0965 3.7741 10.3357 3.46297 10.6334C3.16589 10.9178 2.90084 11.2631 2.67562 11.6597C2.45849 12.0419 2.28271 12.4406 2.15332 12.8448C2.02835 13.2356 1.92383 13.663 1.84265 14.1152C1.76224 14.5635 1.70761 14.9888 1.6806 15.3794C1.65405 15.7621 1.64062 16.1593 1.64062 16.5605C1.64062 17.6045 1.9725 18.4496 2.62695 19.073C3.27331 19.688 4.12856 20.0001 5.1686 20.0001H14.7987C15.8387 20.0001 16.6937 19.6882 17.3402 19.073C17.9948 18.4501 18.3267 17.6048 18.3267 16.5603C18.3265 16.1573 18.3129 15.7598 18.2862 15.379V15.379Z"
+                                            fill="url(#paint1_linear_52_928)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_52_928" x1="5.04102" y1="4.81703" x2="14.6754"
+                                            y2="4.81703" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#EE0979" />
+                                            <stop offset="1" stop-color="#FF6A00" />
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_52_928" x1="1.64062" y1="14.8304" x2="18.3267"
+                                            y2="14.8304" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#EE0979" />
+                                            <stop offset="1" stop-color="#FF6A00" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_52_928">
+                                            <rect width="19.9999" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <a href="#" class="settings__tab-link">Профиль</a>
+                            </div>
+                            <div class="settings__item">
+                                <svg class="settings__tab-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_52_956)">
+                                        <path
+                                            d="M15.8323 0H4.22803C3.28295 0 2.45312 0.777476 2.45312 1.69775V18.8639C2.45312 19.172 2.53886 19.4287 2.67704 19.6271C2.84229 19.8642 3.10836 20.0001 3.39368 20C3.66343 20 3.95064 19.8799 4.21586 19.6534L9.40759 15.2453C9.56794 15.1084 9.79826 15.0299 10.0377 15.0299C10.2771 15.0299 10.507 15.1084 10.6678 15.2457L15.8422 19.6527C16.1083 19.8799 16.3757 20.0001 16.645 20.0001C17.1004 20.0001 17.5443 19.6488 17.5443 18.864V1.69775C17.5443 0.777476 16.7773 0 15.8323 0Z"
+                                            fill="#42204E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_52_956">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <a href="#" class="settings__tab-link">Избранное</a>
+                            </div>
+                            <div class="settings__item">
+                                <svg class="settings__tab-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M18.75 15V16.5625C18.75 17.4244 18.0487 18.125 17.1875 18.125H3.75C2.37125 18.125 1.25 17.0037 1.25 15.625C1.25 15.625 1.25 5.00938 1.25 5C1.25 3.62125 2.37125 2.5 3.75 2.5H15.3125C15.8306 2.5 16.25 2.92 16.25 3.4375C16.25 3.955 15.8306 4.375 15.3125 4.375H3.75C3.40563 4.375 3.125 4.655 3.125 5C3.125 5.345 3.40563 5.625 3.75 5.625H17.1875C18.0487 5.625 18.75 6.32562 18.75 7.1875V8.75H15.625C13.9019 8.75 12.5 10.1519 12.5 11.875C12.5 13.5981 13.9019 15 15.625 15H18.75Z"
+                                        fill="#42204E" />
+                                    <path
+                                        d="M18.75 10V13.75H15.625C14.5894 13.75 13.75 12.9106 13.75 11.875C13.75 10.8394 14.5894 10 15.625 10H18.75Z"
+                                        fill="#42204E" />
+                                </svg>
+                                <a href="#" class="settings__tab-link">Личный счет</a>
+                            </div>
+                            <div class="settings__item">
+                                <svg class="settings__tab-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_52_976)">
+                                        <path
+                                            d="M2.65113 0.63088C1.60435 0.555326 0.628906 1.39289 0.628906 2.49905V17.5276C0.628906 18.5782 1.50823 19.4369 2.56065 19.4031C2.56228 19.4031 2.56392 19.4031 2.56555 19.4031C2.74461 19.396 2.92578 19.3649 3.10105 19.3065L6.85329 18.0533C7.61618 17.7987 8.13827 17.0828 8.13827 16.2744V14.394H7.51473C5.80797 14.3942 4.38091 12.9671 4.38114 11.2604V8.76134C4.38091 7.05456 5.80797 5.6324 7.51473 5.63264H8.13827V3.75713C8.13827 2.9487 7.61705 2.22813 6.85329 1.97332L3.10105 0.720131C2.95122 0.670136 2.80067 0.641673 2.65113 0.63088ZM12.6681 4.39534C12.33 4.37627 11.9916 4.45181 11.6912 4.60197C11.0904 4.90237 10.6373 5.50138 10.6373 6.25618V6.88461H7.51473C6.48481 6.88461 5.63311 7.7314 5.63311 8.76134V11.2604C5.63311 12.2903 6.48481 13.142 7.51473 13.142H10.6373V13.7655C10.6373 15.2751 12.4385 16.1776 13.6462 15.2718L18.6553 11.5147C19.1422 11.1495 19.4209 10.5701 19.4035 9.96196C19.3872 9.39172 19.1135 8.85553 18.6553 8.51192L13.6462 4.7548C13.3443 4.52835 13.0062 4.41442 12.6681 4.39534Z"
+                                            fill="#42204E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_52_976">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <a href="#" class="settings__tab-link">Выйти</a>
+                            </div>
+                        </div>
+                        <div class="settings__profile">
+                            <h1 class="settings__header">
+                                Профиль
+                            </h1>
+                            <div class="settings__row">
+                                <div class="settings__photo">
+                                    <img src="/assets/png/profile__0.png" alt="photo" class="settings__photo_image">
+                                    <div class="settings__add">
+                                        <img src="/assets/svg/camera.svg" alt="add" class="settings__add-item">
+                                        <img src="/assets/svg/camera.svg" alt="add" class="settings__add-item">
+                                        <img src="/assets/svg/camera.svg" alt="add" class="settings__add-item">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="profile__subphotos">
-                                <img src="/assets/png/profile__1.png" alt="photo">
-                                <img src="/assets/png/profile__2.png" alt="photo">
-                                <img src="/assets/png/profile__3.png" alt="photo">
-                                <img src="/assets/png/profile__4.png" alt="photo">
-                            </div>
-                            <div class="profile__head">
-                                <div class="profile__header-row">
-                                    <h2 class="profile__header">Виктор 22</h2>
-                                    <img class="profile__status" src="/assets/svg/catalog__item_online.svg"
-                                        alt="online">
+                                <div class="settings__info">
+                                    <form action="" class="settings__form">
+                                        <h2 class="settings__form-header">
+                                            Основная информация
+                                        </h2>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="name">Имя</label
+                                                class="settings__label">
+                                            <input class="settings__input" type="text" name="name"
+                                                placeholder="Ваше имя" required>
+                                        </div>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="day">Дата рождения</label>
+                                            <div class="settings__date">
+                                                <input class="settings__date-day settings__input" type="number"
+                                                    name="day" placeholder="День" min="1" max="31" required>
+                                                <select class="settings__date-month settings__input settings__select" required>
+                                                    <option value="null">Месяц</option>
+                                                    <option value="декабрь">Декабрь</option>
+                                                    <option value="февраль">Февраль</option>
+                                                    <option value="январь">Январь</option>
+                                                </select>
+                                                <input class="settings__date-year settings__input" type="number"
+                                                    name="year" placeholder="Год" min="1960" max="2000" required>
+                                            </div>
+                                        </div>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="gender">Пол</label>
+                                            <div class="settings__gender">
+                                                <input type="radio" class="settings__gender_radio" name="gender" checked>
+                                                <input type="radio" class="settings__gender_radio" name="gender">
+                                            </div>
+                                        </div>
+                                        <h2 class="settings__form-header">
+                                            Личная информация
+                                        </h2>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="height">Рост</label
+                                                class="settings__label">
+                                            <input class="settings__input" type="number" name="height" placeholder="Предпочитаю не отвечать">
+                                        </div>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="weight">Вес</label
+                                                class="settings__label">
+                                            <input class="settings__input" type="number" name="weight" placeholder="Предпочитаю не отвечать">
+                                        </div>
+                                        <div class="settings__form-item"
+                                        >
+                                        <label class="settings__label" for="hair">Цвет волос</label
+                                            class="settings__label">
+                                        <select class="settings__input settings__select" name="hair">
+                                            <option value="null">Предпочитаю не отвечать</option>
+                                            <option value="brown">Карий</option>
+                                            <option value="brown">Блонд</option>
+                                        </select>
+                                        </div>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="eyes">Цвет глаз</label
+                                                class="settings__label">
+                                            <select class="settings__input settings__select" name="eyes">
+                                                <option value="null">Предпочитаю не отвечать</option>
+                                                <option value="brown">Карий</option>
+                                                <option value="blue">Синий</option>
+                                                <option value="green">Зеленый</option>
+                                            </select>
+                                        </div>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="goal">Цель знакомства</label
+                                                class="settings__label">
+                                            <select class="settings__input settings__select" name="goal">
+                                                <option value="null">Предпочитаю не отвечать</option>
+                                                <option value="chat">Общение</option>
+                                                <option value="date">Встреча</option>
+                                            </select>
+                                        </div>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label" for="about">О себе</label
+                                                class="settings__label">
+                                            <textarea class="settings__input settings__textarea" name="about" id="" cols="30"
+                                                rows="10" placeholder="Напишите о себе"></textarea>
+                                        </div>   
+                                        <h2 class="settings__form-header">
+                                            Аккаунт
+                                        </h2>
+                                        <div class="settings__form-item">
+                                            <label class="settings__label"  for="email">E-mail</label>
+                                            <input class="settings__input" type="email" name="email"
+                                                placeholder="Введите e-mail">
+                                        </div>
+                                        <div class="settings__form-item settings__password">
+                                            <label class="settings__label" for="password">Пароль</label>
+                                            <input class="settings__input" type="password" name="password"
+                                                placeholder="Введите пароль">
+                                            <button class="settings__password_showpass">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_5_21)">
+                                                            <path
+                                                                d="M19.8507 9.60918C19.6722 9.41004 15.3782 4.72656 10 4.72656C4.62181 4.72656 0.32791 9.41004 0.149355 9.60918C-0.0497851 9.83176 -0.0497851 10.1682 0.149355 10.3908C0.32791 10.59 4.62189 15.2734 10 15.2734C15.3781 15.2734 19.6721 10.59 19.8507 10.3908C20.0498 10.1682 20.0498 9.83176 19.8507 9.60918ZM10 14.1016C7.73865 14.1016 5.89845 12.2614 5.89845 10C5.89845 7.73863 7.73865 5.89844 10 5.89844C12.2614 5.89844 14.1016 7.73863 14.1016 10C14.1016 12.2614 12.2614 14.1016 10 14.1016Z"
+                                                                fill="#8B5D9A" />
+                                                            <path
+                                                                d="M10.5859 8.82812C10.5859 8.23867 10.8786 7.72012 11.3237 7.40117C10.9243 7.19668 10.4787 7.07031 10 7.07031C8.38465 7.07031 7.07031 8.38465 7.07031 10C7.07031 11.6154 8.38465 12.9297 10 12.9297C11.4462 12.9297 12.6433 11.8737 12.8798 10.4938C11.6998 10.8737 10.5859 9.98133 10.5859 8.82812Z"
+                                                                fill="#8B5D9A" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_5_21">
+                                                                <rect width="20" height="20" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                </svg>
+                                            </button> 
+                                        </div>
+                                        <button class="settings__save">
+                                            Сохранить
+                                        </button>
+                                    </form>
                                 </div>
-                                <button class="profile__button">
-                                    <p class="profile__hello">Поприветствовать</p>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_17_331)">
-                                            <path
-                                                d="M2.70076 5.08166C3.22298 4.71666 4.0102 4.78666 4.47909 5.17388L3.94132 4.39222C3.50854 3.775 3.66354 3.10722 4.28132 2.67388C4.89909 2.24222 6.64965 3.40277 6.64965 3.40277C6.21298 2.77944 6.29465 1.98944 6.91798 1.55222C7.54132 1.11666 8.40132 1.26722 8.83798 1.89166L14.6269 10.0694L13.8891 17.2222L7.73187 14.9767L2.36132 7.01389C1.92076 6.38666 2.07298 5.52166 2.70076 5.08166Z"
-                                                fill="#EF9645" />
-                                            <path
-                                                d="M1.49742 9.63111C1.49742 9.63111 0.868532 8.71444 1.78575 8.08611C2.70187 7.45777 3.3302 8.37388 3.3302 8.37388L6.24742 12.6283C6.34798 12.4606 6.45798 12.295 6.58075 12.1317L2.53187 6.22777C2.53187 6.22777 1.90353 5.31166 2.8202 4.68333C3.73631 4.05499 4.36464 4.97111 4.36464 4.97111L8.17298 10.525C8.31464 10.4094 8.45964 10.2933 8.60909 10.1794L4.19409 3.73999C4.19409 3.73999 3.56575 2.82388 4.48242 2.19555C5.39853 1.56722 6.02687 2.48333 6.02687 2.48333L10.4419 8.92166C10.6041 8.82222 10.7646 8.7361 10.9258 8.64499L6.79909 2.62722C6.79909 2.62722 6.17075 1.7111 7.08687 1.08277C8.00298 0.454438 8.63131 1.37055 8.63131 1.37055L12.9946 7.73388L13.658 8.70166C10.9091 10.5872 10.6474 14.1344 12.218 16.425C12.5319 16.8833 12.9902 16.5694 12.9902 16.5694C11.1052 13.82 11.6808 10.7305 14.4302 8.84555L13.6196 4.78888C13.6196 4.78888 13.3169 3.71999 14.3852 3.41666C15.4541 3.11388 15.7574 4.18277 15.7574 4.18277L16.6935 6.96277C17.0646 8.06499 17.4596 9.16333 17.9824 10.2022C19.4585 13.1356 18.5769 16.7811 15.7935 18.6906C12.7574 20.7722 8.60687 19.9983 6.52464 16.9628L1.49742 9.63111Z"
-                                                fill="#FFDC5D" />
-                                            <path
-                                                d="M6.66678 17.8011C4.44456 17.8011 2.199 15.5555 2.199 13.3333C2.199 13.0261 1.974 12.7778 1.66678 12.7778C1.35956 12.7778 1.08789 13.0261 1.08789 13.3333C1.08789 16.6667 3.33345 18.9122 6.66678 18.9122C6.974 18.9122 7.22233 18.6405 7.22233 18.3333C7.22233 18.0261 6.974 17.8011 6.66678 17.8011Z"
-                                                fill="#5DADEC" />
-                                            <path
-                                                d="M3.88889 18.8889C2.22222 18.8889 1.11111 17.7778 1.11111 16.1111C1.11111 15.8039 0.862778 15.5555 0.555556 15.5555C0.248333 15.5555 0 15.8039 0 16.1111C0 18.3333 1.66667 20 3.88889 20C4.19611 20 4.44444 19.7516 4.44444 19.4444C4.44444 19.1372 4.19611 18.8889 3.88889 18.8889ZM13.3333 1.11108C13.0267 1.11108 12.7778 1.35997 12.7778 1.66664C12.7778 1.97331 13.0267 2.2222 13.3333 2.2222C15.5556 2.2222 17.7778 4.21608 17.7778 6.66664C17.7778 6.97331 18.0267 7.2222 18.3333 7.2222C18.64 7.2222 18.8889 6.97331 18.8889 6.66664C18.8889 3.60331 16.6667 1.11108 13.3333 1.11108Z"
-                                                fill="#5DADEC" />
-                                            <path
-                                                d="M16.1112 0.0233154C15.8046 0.0233154 15.5557 0.248871 15.5557 0.555538C15.5557 0.862204 15.8046 1.13443 16.1112 1.13443C17.7779 1.13443 18.8657 2.37054 18.8657 3.88887C18.8657 4.19554 19.1373 4.44443 19.4446 4.44443C19.7518 4.44443 19.9768 4.19554 19.9768 3.88887C19.9768 1.7572 18.3334 0.0233154 16.1112 0.0233154Z"
-                                                fill="#5DADEC" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_17_331">
-                                                <rect width="20" height="20" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </button>
                             </div>
-                            <div class="profile__data">
-                                <table class="profile__table">
-                                    <tr class="profile__table-row">
-                                        <td class="profile__table-col">Cтавка</td>
-                                        <td class="profile__table-col">15 654 руб</td>
-                                    </tr>
-                                    <tr></tr>
-                                    <tr class="profile__table-row">
-                                        <td class="profile__table-col">Рост</td>
-                                        <td class="profile__table-col">186 см</td>
-                                    </tr>
-                                    <tr class="profile__table-row">
-                                        <td class="profile__table-col">Вес</td>
-                                        <td class="profile__table-col">80 кг</td>
-                                    </tr>
-                                    <tr class="profile__table-row">
-                                        <td class="profile__table-col">Цвет глаз</td>
-                                        <td class="profile__table-col">Голубые</td>
-                                    </tr>
-                                    <tr class="profile__table-row">
-                                        <td class="profile__table-col">Цвет волос</td>
-                                        <td class="profile__table-col">Светлыe</td>
-                                    </tr>
-                                    <tr class="profile__table-row">
-                                        <td class="profile__table-col">Цель знакомства</ptd>
-                                        <td class="profile__table-col">Пока не знаю</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="profile__text">
-                                <h3 class="profile__name">О себе</h3>
-                                <p class="profile__par">
-                                    Задача организации, в особенности же сложившаяся структура организации
-                                    представляет собой интересный эксперимент проверки модели развития.
-                                </p>
-                                <p class="profile__par">
-                                    Задача организации, в особенности же постоянный количественный рост
-                                    и сфера нашей активности играет важную роль в формировании позиций,
-                                    занимаемых участниками в отношении поставленных задач.
-                                </p>
-
-                            </div>
-                            <p class="profile__regdate">
-                                На сайте с 21.08.2021
-                            </p>
                         </div>
-                        <button class="profile__changer">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.5 22.5L20 15L12.5 7.5" stroke="white" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </button>
                     </div>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -435,7 +510,6 @@
                 </div>
             </div>
         </footer>
-    </div>
 </body>
 
 </html>
