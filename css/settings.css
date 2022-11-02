@@ -343,6 +343,9 @@ main {
   background: linear-gradient(#1c0a22, #1c0a22) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
   border-left: 2px solid transparent;
 }
+.settings__item:hover .settings__tab-svg path {
+  fill: url(#gradient);
+}
 .settings__profile {
   display: flex;
   flex-direction: column;

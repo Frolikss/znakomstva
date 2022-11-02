@@ -42,6 +42,12 @@ main {
                 linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
             border-left: 2px solid transparent;
         }
+
+        &:hover {
+            .settings__tab-svg path {
+                fill: url(#gradient);
+            }
+        }
     }
 
     &__profile {
