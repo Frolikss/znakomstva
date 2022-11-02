@@ -462,7 +462,7 @@ main {
   background: url(/assets/svg/male.svg) no-repeat center;
   border: 1px solid #ee0d88;
 }
-.settings__gender_radio:checked {
+.settings__gender_radio:first-child:checked {
   background: url(/assets/svg/male.svg) no-repeat center, #056bda;
   border: none;
 }

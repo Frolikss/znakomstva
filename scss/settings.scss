@@ -167,7 +167,7 @@ main {
             padding: 2rem;
             background: url(/assets/svg/male.svg) no-repeat center;
             border: 1px solid #ee0d88;
-            &:checked {
+            &:first-child:checked {
                 background: url(/assets/svg/male.svg) no-repeat center, #056bda;
                 border: none;
             }
