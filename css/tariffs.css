@@ -313,6 +313,7 @@ body {
 .main {
   display: flex;
   justify-content: flex-start;
+  align-items: stretch;
   min-height: calc(100vh - 10.625rem - 4.6875rem);
 }
 
@@ -378,6 +379,10 @@ body {
 @media (max-width: 1024px) {
   .tariffs__item {
     padding: 2rem;
+  }
+  .tariffs__svg {
+    width: 4rem;
+    height: 4rem;
   }
 }
 @media (max-width: 930px) {
