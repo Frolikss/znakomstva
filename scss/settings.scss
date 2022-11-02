@@ -172,6 +172,10 @@ main {
                 border: none;
             }
 
+            &:last-child {
+                background: url(/assets/svg/female.svg) no-repeat center;
+            }
+
             &:last-child:checked {
                 background: url(/assets/svg/female.svg) no-repeat center, #056bda;
             }

@@ -466,6 +466,9 @@ main {
   background: url(/assets/svg/male.svg) no-repeat center, #056bda;
   border: none;
 }
+.settings__gender_radio:last-child {
+  background: url(/assets/svg/female.svg) no-repeat center;
+}
 .settings__gender_radio:last-child:checked {
   background: url(/assets/svg/female.svg) no-repeat center, #056bda;
 }
