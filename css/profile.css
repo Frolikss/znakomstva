@@ -515,7 +515,7 @@ select:focus {
     background-size: cover;
     z-index: -1;
   }
-  .profile__photo__photo-buttons {
+  .profile__photo-buttons {
     display: flex;
     gap: 1rem;
   }
