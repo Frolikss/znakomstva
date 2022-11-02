@@ -342,6 +342,9 @@ select:focus {
   top: -0.5rem;
   margin: 0.625rem;
 }
+.catalog__item-info {
+  padding-top: 100%;
+}
 .catalog__item-name, .catalog__item-country {
   padding: 0 0 0 1.25rem;
 }
