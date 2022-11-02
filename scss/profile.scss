@@ -139,7 +139,6 @@
 
         &-col:last-child {
             text-align: end;
-            position: relative;
         }
     }
 
@@ -243,35 +242,33 @@
         &__regdate {
             font-size: 0.875em;
         }
-    }
 
-    &__head {
-        .profile__button {
+        &__button {
             padding: 1.4375rem 1.875rem;
         }
-    }
+    
+        &__subphotos {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    
+        &__subphotos::-webkit-scrollbar {
+            display: none;
+        }
+    
+        &__row_photo {
+            width: 100%;
+            height: calc(100vh - 7.5rem);
+        }
 
-    &__subphotos {
-        display: flex;
-        gap: 0.5rem;
-        overflow-x: auto;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    &__subphotos::-webkit-scrollbar {
-        display: none;
-    }
-
-    &__row_photo {
-        width: 100%;
-        height: calc(100vh - 7.5rem);
-
-        .profile__bookmark {
+        &__bookmark {
             display: none;
         }
 
-        .profile__photo {
+        &__photo {
             position: relative;
             top: -20%;
             justify-content: flex-end;
@@ -280,14 +277,14 @@
             border-radius: 0;
             background-size: cover;
             z-index: -1;
+
+            &__photo-buttons {
+                display: flex;
+                gap: 1rem;
+            }
         }
 
-        .profile__photo-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .profile__close {
+        &__close {
             display: block;
         }
     }

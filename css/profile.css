@@ -409,7 +409,7 @@ select:focus {
   font-weight: 400;
 }
 .profile__table-row {
-  background: url(/assets/svg/lines.svg) no-repeat center;
+  background: url(/assets/svg/lines.svg) repeat-x center;
 }
 .profile__table-row:first-child {
   font-size: 1.125em;
@@ -417,7 +417,6 @@ select:focus {
 }
 .profile__table-col:last-child {
   text-align: end;
-  position: relative;
 }
 .profile__text {
   display: flex;
@@ -486,6 +485,9 @@ select:focus {
   .profile__regdate {
     font-size: 0.875em;
   }
+  .profile__button {
+    padding: 1.4375rem 1.875rem;
+  }
   .profile__subphotos {
     display: flex;
     gap: 0.5rem;
@@ -500,10 +502,10 @@ select:focus {
     width: 100%;
     height: calc(100vh - 7.5rem);
   }
-  .profile__row_photo .profile__bookmark {
+  .profile__bookmark {
     display: none;
   }
-  .profile__row_photo .profile__photo {
+  .profile__photo {
     position: relative;
     top: -20%;
     justify-content: flex-end;
@@ -513,11 +515,11 @@ select:focus {
     background-size: cover;
     z-index: -1;
   }
-  .profile__row_photo .profile__photo-buttons {
+  .profile__photo__photo-buttons {
     display: flex;
     gap: 1rem;
   }
-  .profile__row_photo .profile__close {
+  .profile__close {
     display: block;
   }
 }
