@@ -306,9 +306,12 @@ select:focus {
     bottom: 0;
   }
 }
+.main {
+  display: block;
+}
+
 .catalog__col {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   gap: 3.125rem;
   margin: 1.875rem 0 0 0;
@@ -342,6 +345,9 @@ select:focus {
 .catalog__item-name, .catalog__item-country {
   padding: 0 0 0 1.25rem;
 }
+.catalog__country-flag {
+  width: 1.125rem;
+}
 .catalog__item-country {
   display: flex;
   align-items: center;
@@ -362,9 +368,6 @@ select:focus {
 }
 
 @media (max-width: 1300px) {
-  .container {
-    width: 100%;
-  }
   .catalog__row {
     overflow-x: auto;
     -ms-overflow-style: none;

@@ -129,7 +129,7 @@
         font-weight: 400;
 
         &-row {
-            background: url(/assets/svg/lines.svg) no-repeat center;
+            background: url(/assets/svg/lines.svg) repeat-x center;
         }
 
         &-row:first-child {

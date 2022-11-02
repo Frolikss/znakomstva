@@ -3,10 +3,13 @@
 
 @include header__login();
 
+.main {
+    display: block;
+}
+
 .catalog {
     &__col {
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
         gap: 3.125rem;
         margin: 1.875rem 0 0 0;
@@ -49,6 +52,10 @@
         padding: 0 0 0 1.25rem;
     }
 
+    &__country-flag {
+        width: 1.125rem;  
+    }
+
     &__item-country {
         display: flex;
         align-items: center;
@@ -71,10 +78,6 @@
 }
 
 @media (max-width: 1300px) {
-    .container {
-        width: 100%;
-    }
-
     .catalog {
         &__row {
             overflow-x: auto;
