@@ -314,218 +314,82 @@ select:focus {
 }
 .main {
   min-height: calc(100vh - 10.625rem - 4.6875rem);
+  overflow: hidden;
 }
 
-.profile {
-  margin: 1rem 0 0 0;
-}
-.profile__changer {
-  align-self: center;
-  background: linear-gradient(#2d1436, #2d1436) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
-  border-radius: 10rem;
-  border: 1px solid transparent;
-  padding: 1.25rem 1.3rem 1.1rem;
-}
-.profile__col {
-  display: flex;
-  gap: 1.875rem;
-}
-.profile__block {
-  display: grid;
-  grid-template-areas: "photo head" "photo data" "photo text" "subphoto text" "subphoto regdate";
-  gap: 0 1.875rem;
-}
-.profile__row_photo {
-  grid-area: photo;
-}
-.profile__photo {
+.notfound__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 31.25rem;
-  width: 23.75rem;
-  border-radius: 3.125rem;
-  background: url(/assets/png/profile__0.png) no-repeat;
-  margin: 0 0 0.625rem 0;
+  gap: 2rem;
 }
-.profile__photo-buttons {
-  margin: 0 auto;
+.notfound__header {
+  font-size: 18.75em;
+  font-weight: 500;
 }
-.profile__bookmark {
-  padding: 1.875rem;
-  align-self: flex-start;
+.notfound__text {
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: center;
 }
-.profile__like, .profile__close {
-  margin: 0 auto 1.875rem;
-  padding: 1.3rem 1.125rem 1rem;
-  border-radius: 3.125rem;
-  width: 3.75rem;
-  background: linear-gradient(90deg, #ee0979, #ff6a00);
-}
-.profile__close {
-  display: none;
-  background: linear-gradient(90deg, #0575e6 0%, #021b79 100%);
-}
-.profile__subphotos {
+.notfound__button {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  grid-area: subphoto;
-}
-.profile__subphotos > * {
-  width: 5.5625rem;
-  height: 5.5625rem;
-}
-.profile__head {
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-  font-size: 2em;
-  grid-area: head;
-}
-.profile__header-row {
-  display: flex;
-  gap: 0.5rem;
-}
-.profile__status {
-  box-shadow: 0px 4px 20px #33e159;
-  align-self: flex-start;
-}
-.profile__button {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 13.75rem;
-  gap: 0.625rem;
-  font-size: 0.875rem;
-  background: linear-gradient(90deg, #ee0979, #ff6a00);
-  border-radius: 6.25rem;
-  padding: 0.875rem 1.875rem;
+  gap: 0.5rem;
+  align-self: center;
+  padding: 1.5rem 2.185rem;
+  border: 1px solid #fff;
+  border-radius: 6rem;
+  width: 50%;
 }
-.profile__data {
-  display: flex;
-  flex-direction: column;
-  gap: 1.875rem;
-  grid-area: data;
-}
-.profile__table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 0.625em;
-  font-weight: 400;
-}
-.profile__table-row {
-  background: url(/assets/svg/lines.svg) repeat-x center;
-}
-.profile__table-row:first-child {
-  font-size: 1.125em;
-  font-weight: 500;
-}
-.profile__table-col:last-child {
-  text-align: end;
-}
-.profile__text {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  grid-area: text;
-}
-.profile__name {
-  font-size: 1.125em;
-  font-weight: 500;
-}
-.profile__par {
-  font-weight: 400;
-  line-height: 150%;
-}
-.profile__regdate {
-  grid-area: regdate;
-  color: #8b5d9a;
+.notfound__button--arrow {
+  transform: rotate(90deg);
 }
 
-@media (max-width: 1055px) {
-  .profile__changer {
-    display: none;
+.blob,
+.blob__outline {
+  position: absolute;
+  z-index: -1;
+  width: 70%;
+}
+@media (max-width: 1250px) {
+  .blob,
+.blob__outline {
+    width: 900px;
   }
 }
-@media (max-width: 850px) {
-  .profile__text {
-    font-size: 0.75em;
-  }
+
+.blob__outline:nth-child(2) svg {
+  transform: scale(1.2);
 }
-@media (max-width: 768px) {
-  .profile__block {
-    grid-template-areas: "photo" "photo" "text" "head" "subphoto" "data" "regdate";
-    gap: 2rem;
-  }
-  .profile__row_photo {
+
+.blob__outline:nth-child(3) svg {
+  transform: scale(1.3);
+}
+
+.blob__outline:nth-child(4) svg {
+  transform: scale(1.4);
+}
+
+.blob__outline:nth-child(5) svg {
+  transform: scale(1.5);
+}
+
+.blob__outline:nth-child(6) svg {
+  transform: scale(1.6);
+}
+
+@media (max-width: 900px) {
+  .notfound__header {
+    font-size: 9.375em;
     margin: 0 auto;
   }
-  .profile__header-row {
-    display: none;
-  }
-  .profile__button {
-    width: auto;
-  }
-  .profile__text {
-    font-size: 1em;
-    gap: 1.5rem;
-  }
-}
-@media (max-width: 500px) {
-  .header {
-    background: none;
-    z-index: 1;
-  }
-  .header__bell-svg path, .header__search path {
-    fill: #42204e;
-  }
-  .container {
-    padding: 0;
-  }
-  .profile {
-    margin: 0;
-  }
-  .profile__subphotos, .profile__head, .profile__data, .profile__text, .profile__regdate {
-    padding: 0 1rem;
-  }
-  .profile__regdate {
+  .notfound__text {
     font-size: 0.875em;
   }
-  .profile__button {
-    padding: 1.4375rem 1.875rem;
-  }
-  .profile__subphotos {
-    display: flex;
-    gap: 0.5rem;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .profile__subphotos::-webkit-scrollbar {
-    display: none;
-  }
-  .profile__row_photo {
-    width: 100%;
-    height: calc(100vh - 7.5rem);
-  }
-  .profile__bookmark {
-    display: none;
-  }
-  .profile__photo {
-    position: relative;
-    top: -20%;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100vh;
-    border-radius: 0;
-    background-size: cover;
-  }
-  .profile__photo-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  .profile__close {
-    display: block;
+  .notfound__button {
+    font-size: 0.9em;
+    padding: 1.125rem 2.25rem;
+    width: 80%;
   }
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/settings.css">
-    <title>Settings</title>
+    <link rel="stylesheet" href="/css/account.css">
+    <title>Personal Account</title>
 </head>
-
 <body>
     <div class="wrapper">
         <header class="header">
@@ -34,12 +32,12 @@
                     <div class="header__logo">
                         <a href="/index.html" class="header__logo-link">
                             <img class="header__logo-image" src="/assets/svg/logo.svg" alt="logo">
-                            <span class="header__logo-name">Znakomstva.com</span>
-                        </a>
+                            <span class="header__logo-name">Znakomstva.com
+                        </span></a>
                     </div>
                     <ul class="header__list">
                         <li class="header__list-item">
-                            <a href="/views/catalog.html" class="header__list-link active">Анкеты</a>
+                            <a href="" class="header__list-link header__list_active">Анкеты</a>
                         </li>
                         <li class="header__list-item">
                             <a href="" class="header__list-link">Сообщения</a>
@@ -61,34 +59,26 @@
                         </div>
                     </div>
                     <button class="header__search">
-                        <svg class="header__search-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 20 20" fill="none">
+                        <svg class="header__search-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <g clip-path="url(#clip0_802_286)">
-                                <path
-                                    d="M19.3613 18.2168L14.6012 13.2662C15.8251 11.8113 16.4957 9.98069 16.4957 8.07499C16.4957 3.62251 12.8732 0 8.4207 0C3.96821 0 0.345703 3.62251 0.345703 8.07499C0.345703 12.5275 3.96821 16.15 8.4207 16.15C10.0922 16.15 11.6851 15.6458 13.047 14.6888L17.8432 19.677C18.0436 19.8852 18.3133 20 18.6022 20C18.8757 20 19.1352 19.8957 19.3321 19.7061C19.7506 19.3034 19.764 18.6357 19.3613 18.2168ZM8.4207 2.10652C11.7118 2.10652 14.3892 4.78391 14.3892 8.07499C14.3892 11.3661 11.7118 14.0435 8.4207 14.0435C5.12961 14.0435 2.45222 11.3661 2.45222 8.07499C2.45222 4.78391 5.12961 2.10652 8.4207 2.10652Z"
-                                    fill="#925FA4" />
+                                <path d="M19.3613 18.2168L14.6012 13.2662C15.8251 11.8113 16.4957 9.98069 16.4957 8.07499C16.4957 3.62251 12.8732 0 8.4207 0C3.96821 0 0.345703 3.62251 0.345703 8.07499C0.345703 12.5275 3.96821 16.15 8.4207 16.15C10.0922 16.15 11.6851 15.6458 13.047 14.6888L17.8432 19.677C18.0436 19.8852 18.3133 20 18.6022 20C18.8757 20 19.1352 19.8957 19.3321 19.7061C19.7506 19.3034 19.764 18.6357 19.3613 18.2168ZM8.4207 2.10652C11.7118 2.10652 14.3892 4.78391 14.3892 8.07499C14.3892 11.3661 11.7118 14.0435 8.4207 14.0435C5.12961 14.0435 2.45222 11.3661 2.45222 8.07499C2.45222 4.78391 5.12961 2.10652 8.4207 2.10652Z" fill="#925FA4"></path>
                             </g>
                             <defs>
                                 <clipPath id="clip0_802_286">
-                                    <rect width="20" height="20" fill="white" />
+                                    <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
                         </svg>
                     </button>
                     <button class="header__bell">
-                        <svg class="header__bell-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 20 20" fill="#925FA4">
+                        <svg class="header__bell-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <g clip-path="url(#clip0_802_280)">
-                                <path
-                                    d="M17.8162 14.0942C16.5562 13.0292 15.8337 11.4725 15.8337 9.82333V7.5C15.8337 4.5675 13.6553 2.14 10.8337 1.73333V0.833333C10.8337 0.3725 10.4603 0 10.0003 0C9.54033 0 9.16699 0.3725 9.16699 0.833333V1.73333C6.34449 2.14 4.16699 4.5675 4.16699 7.5V9.82333C4.16699 11.4725 3.44449 13.0292 2.17699 14.1008C1.85283 14.3783 1.66699 14.7817 1.66699 15.2083C1.66699 16.0125 2.32116 16.6667 3.12533 16.6667H16.8753C17.6795 16.6667 18.3337 16.0125 18.3337 15.2083C18.3337 14.7817 18.1478 14.3783 17.8162 14.0942Z"
-                                    fill="#925FA4" />
-                                <path
-                                    d="M10.0001 20C11.5093 20 12.7718 18.9242 13.0618 17.5H6.93848C7.22848 18.9242 8.49098 20 10.0001 20Z"
-                                    fill="#925FA4" />
+                                <path d="M17.8162 14.0942C16.5562 13.0292 15.8337 11.4725 15.8337 9.82333V7.5C15.8337 4.5675 13.6553 2.14 10.8337 1.73333V0.833333C10.8337 0.3725 10.4603 0 10.0003 0C9.54033 0 9.16699 0.3725 9.16699 0.833333V1.73333C6.34449 2.14 4.16699 4.5675 4.16699 7.5V9.82333C4.16699 11.4725 3.44449 13.0292 2.17699 14.1008C1.85283 14.3783 1.66699 14.7817 1.66699 15.2083C1.66699 16.0125 2.32116 16.6667 3.12533 16.6667H16.8753C17.6795 16.6667 18.3337 16.0125 18.3337 15.2083C18.3337 14.7817 18.1478 14.3783 17.8162 14.0942Z" fill="#925FA4"></path>
+                                <path d="M10.0001 20C11.5093 20 12.7718 18.9242 13.0618 17.5H6.93848C7.22848 18.9242 8.49098 20 10.0001 20Z" fill="#925FA4"></path>
                             </g>
                             <defs>
                                 <clipPath id="clip0_802_280">
-                                    <rect width="20" height="20" fill="white" />
+                                    <rect width="20" height="20" fill="white"></rect>
                                 </clipPath>
                             </defs>
                         </svg>
@@ -104,20 +94,20 @@
             </div>
         </header>
         <main class="main">
-            <section class="settings">
+            <section class="account">
                 <div class="container">
-                    <div class="settings__row">
-                        <div class="settings__tab tab">
+                    <div class="account__row">
+                        <div class="account__tab tab">
                             <form class="tab__form">
                                 <select name="tab" class="tab__form_select">
-                                    <img src="/assets/svg/arrow.svg" alt="arrow" class="settings__item-arrow">
+                                    <img src="/assets/svg/arrow.svg" alt="arrow" class="tab__item-arrow">
                                     <option value="">Профиль</option>
                                     <option value="">Избранное</option>
                                     <option value="">Личный счет</option>
                                     <option value="">Выйти</option>
                                 </select>
                             </form>
-                            <a href="/views/settings.html" class="tab__item tab__item_active">
+                            <a href="/views/settings.html" class="tab__item">
                                 <svg class="tab__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 20 20" fill="none">
                                     <g clip-path="url(#clip0_52_928)">
@@ -172,7 +162,7 @@
                                 </svg>
                                 <span class="tab__link">Избранное</span>
                             </a>
-                            <a href="/index.html" class="tab__item">
+                            <a href="/index.html" class="tab__item tab__item_active">
                                 <svg class="tab__svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     viewBox="0 0 20 20" fill="none">
                                     <path
@@ -201,139 +191,22 @@
                                 <span class="tab__link">Выйти</span>
                             </a>
                         </div>
-                        <div class="settings__profile">
-                            <h1 class="settings__header">
-                                Профиль
+                        <div class="account__info">
+                            <h1 class="account__header">
+                                Личный счет
                             </h1>
-                            <div class="settings__row">
-                                <div class="settings__photo">
-                                    <img src="/assets/png/profile__0.png" alt="photo" class="settings__photo_image">
-                                    <div class="settings__add">
-                                        <img src="/assets/svg/camera.svg" alt="add" class="settings__add-item">
-                                        <img src="/assets/svg/camera.svg" alt="add" class="settings__add-item">
-                                        <img src="/assets/svg/camera.svg" alt="add" class="settings__add-item">
-                                    </div>
+                            <div class="account__text">
+                                <div class="account__item">
+                                    <p class="account__item--name">Статус подписки</p>
+                                    <p class="account__item--summary">На месяц, до 20.11.2021</p>
                                 </div>
-                                <div class="settings__info">
-                                    <form action="" class="settings__form">
-                                        <h2 class="settings__form-header">
-                                            Основная информация
-                                        </h2>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="name">Имя</label
-                                                class="settings__label">
-                                            <input class="settings__input" type="text" name="name"
-                                                placeholder="Ваше имя" required>
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="day">Дата рождения</label>
-                                            <div class="settings__date">
-                                                <input class="settings__date-day settings__input" type="number"
-                                                    name="day" placeholder="День" min="1" max="31" required>
-                                                <select class="settings__date-month settings__input settings__select"
-                                                    required>
-                                                    <option value="null">Месяц</option>
-                                                    <option value="декабрь">Декабрь</option>
-                                                    <option value="февраль">Февраль</option>
-                                                    <option value="январь">Январь</option>
-                                                </select>
-                                                <input class="settings__date-year settings__input" type="number"
-                                                    name="year" placeholder="Год" min="1960" max="2000" required>
-                                            </div>
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="gender">Пол</label>
-                                            <div class="settings__gender">
-                                                <input type="radio" class="settings__gender_radio" name="gender"
-                                                    checked>
-                                                <input type="radio" class="settings__gender_radio" name="gender">
-                                            </div>
-                                        </div>
-                                        <h2 class="settings__form-header">
-                                            Личная информация
-                                        </h2>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="height">Рост</label
-                                                class="settings__label">
-                                            <input class="settings__input" type="number" name="height"
-                                                placeholder="Предпочитаю не отвечать">
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="weight">Вес</label
-                                                class="settings__label">
-                                            <input class="settings__input" type="number" name="weight"
-                                                placeholder="Предпочитаю не отвечать">
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="hair">Цвет волос</label
-                                                class="settings__label">
-                                            <select class="settings__input settings__select" name="hair">
-                                                <option value="null">Предпочитаю не отвечать</option>
-                                                <option value="brown">Карий</option>
-                                                <option value="brown">Блонд</option>
-                                            </select>
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="eyes">Цвет глаз</label
-                                                class="settings__label">
-                                            <select class="settings__input settings__select" name="eyes">
-                                                <option value="null">Предпочитаю не отвечать</option>
-                                                <option value="brown">Карий</option>
-                                                <option value="blue">Синий</option>
-                                                <option value="green">Зеленый</option>
-                                            </select>
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="goal">Цель знакомства</label
-                                                class="settings__label">
-                                            <select class="settings__input settings__select" name="goal">
-                                                <option value="null">Предпочитаю не отвечать</option>
-                                                <option value="chat">Общение</option>
-                                                <option value="date">Встреча</option>
-                                            </select>
-                                        </div>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="about">О себе</label
-                                                class="settings__label">
-                                            <textarea class="settings__input settings__textarea" name="about" id=""
-                                                cols="30" rows="10" placeholder="Напишите о себе"></textarea>
-                                        </div>
-                                        <h2 class="settings__form-header">
-                                            Аккаунт
-                                        </h2>
-                                        <div class="settings__form-item">
-                                            <label class="settings__label" for="email">E-mail</label>
-                                            <input class="settings__input" type="email" name="email"
-                                                placeholder="Введите e-mail">
-                                        </div>
-                                        <div class="settings__form-item settings__password">
-                                            <label class="settings__label" for="password">Пароль</label>
-                                            <input class="settings__input" type="password" name="password"
-                                                placeholder="Введите пароль">
-                                            <button class="settings__password_showpass">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_5_21)">
-                                                        <path
-                                                            d="M19.8507 9.60918C19.6722 9.41004 15.3782 4.72656 10 4.72656C4.62181 4.72656 0.32791 9.41004 0.149355 9.60918C-0.0497851 9.83176 -0.0497851 10.1682 0.149355 10.3908C0.32791 10.59 4.62189 15.2734 10 15.2734C15.3781 15.2734 19.6721 10.59 19.8507 10.3908C20.0498 10.1682 20.0498 9.83176 19.8507 9.60918ZM10 14.1016C7.73865 14.1016 5.89845 12.2614 5.89845 10C5.89845 7.73863 7.73865 5.89844 10 5.89844C12.2614 5.89844 14.1016 7.73863 14.1016 10C14.1016 12.2614 12.2614 14.1016 10 14.1016Z"
-                                                            fill="#8B5D9A" />
-                                                        <path
-                                                            d="M10.5859 8.82812C10.5859 8.23867 10.8786 7.72012 11.3237 7.40117C10.9243 7.19668 10.4787 7.07031 10 7.07031C8.38465 7.07031 7.07031 8.38465 7.07031 10C7.07031 11.6154 8.38465 12.9297 10 12.9297C11.4462 12.9297 12.6433 11.8737 12.8798 10.4938C11.6998 10.8737 10.5859 9.98133 10.5859 8.82812Z"
-                                                            fill="#8B5D9A" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_5_21">
-                                                            <rect width="20" height="20" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <button class="settings__save">
-                                            Сохранить
-                                        </button>
-                                    </form>
+                                <div class="account__item">
+                                    <p class="account__item--name">Текущий баланс</p>
+                                    <p class="account__item--summary">2548 руб</p>
                                 </div>
+                                <button class="account__button">
+                                    Пополнить
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -388,6 +261,6 @@
                 </div>
             </div>
         </footer>
+    </div>
 </body>
-
 </html>

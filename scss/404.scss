@@ -1,0 +1,82 @@
+@use "abstracts/" as *;
+@use "layouts/" as *;
+
+@include header__login();
+
+.main {
+    min-height: calc(100vh - 10.625rem - 4.6875rem);
+    overflow: hidden;
+}
+
+.notfound {
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__header {
+        font-size: 18.75em;
+        font-weight: 500;
+    }
+
+    &__text {
+        font-size: 1.25em;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        align-self: center;
+        padding: 1.5rem 2.185rem;
+        border: 1px solid #fff;
+        border-radius: 6rem;
+        width: 50%;
+
+        &--arrow {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.blob,
+.blob__outline {
+    position: absolute;
+    z-index: -1;
+    width: 70%;
+
+    @media (max-width: 1250px) {
+        width: 900px;
+    }
+}
+
+@for $i from 2 through 6 {
+    .blob__outline:nth-child(#{$i}) {
+        svg {
+            transform: scale(1 + calc($i * 0.1));
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .notfound {
+        &__header {
+            font-size: 9.375em;
+            margin: 0 auto;
+        }
+
+        &__text {
+            font-size: 0.875em;
+        }
+
+        &__button {
+            font-size: 0.9em;
+            padding: 1.125rem 2.25rem;
+            width: 80%;
+        }
+    }
+}

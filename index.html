@@ -21,10 +21,12 @@
                 </p>
                 <div class="header__country-row">
                     <img src="/assets/svg/flag.svg" alt="" class="header__country-flag">
+                    <form action="
+                    " class="header__country-form">
                     <select class="header__country-select">
                         <option value="us">Америка</option>
                         <option value="ua">Украина</option>
-                    </select>
+                    </select></form>
                 </div>
             </div>
             <div class="container">
@@ -32,7 +34,7 @@
                     <div class="header__logo">
                         <a href="/index.html" class="header__logo-link">
                             <img class="header__logo-image" src="assets/svg/logo.svg" alt="logo">
-                            <p class="header__logo-name">Znakomstva.com</p>
+                            <span class="header__logo-name">Znakomstva.com</>
                         </a>
                     </div>
                     <div class="header__menu">
@@ -55,7 +57,7 @@
                         </linearGradient>
                     </defs>
                     <path fill="url(#gradient)">
-                        <animate attributeName="d" dur="30s" repeatCount="indefinite"
+                        <animate attributeName="d" dur="5s" repeatCount="indefinite"
                             values="M458,310.5Q417,371,372,428.5Q327,486,255.5,470Q184,454,132.5,413.5Q81,373,80.5,311.5Q80,250,103.5,205.5Q127,161,150,87.5Q173,14,239,48Q305,82,365.5,102Q426,122,462.5,186Q499,250,458,310.5Z;
 
                     M410,294.5Q372,339,348,409Q324,479,250,479Q176,479,137.5,419Q99,359,64,304.5Q29,250,51.5,186Q74,122,127.5,79.5Q181,37,245,52.5Q309,68,367,95.5Q425,123,436.5,186.5Q448,250,410,294.5Z;
@@ -204,13 +206,15 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="footer__politics">Политика обработки персональных данных</a>
+                    <a href="/404.html" class="footer__politics">Политика обработки персональных данных</a>
                     <div class="footer__lang">
-                        <select class="footer__lang-select">
-                            <option value="ru">RU</option>
-                            <option value="ru">UA</option>
-                            <option value="ru">US</option>
-                        </select>
+                        <form class="footer__country-form">
+                            <select class="footer__lang-select">
+                                <option value="ru">RU</option>
+                                <option value="ru">UA</option>
+                                <option value="ru">US</option>
+                            </select>
+                        </form>
                     </div>
                     <p class="footer__copyright">
                         © Company 2021

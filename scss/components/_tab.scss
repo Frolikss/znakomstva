@@ -1,0 +1,88 @@
+@use "../abstracts/" as *;
+
+.tab {
+    align-self: flex-start;
+    background: #1c0a22;
+    border-radius: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 23%;
+    gap: 1.25rem;
+    padding: 1.875rem 0;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 0 1.875rem;
+        padding-left: 1.75rem;
+        &_active {
+            background: linear-gradient(#1c0a22, #1c0a22) padding-box,
+                linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+            border-left: 2px solid transparent;
+            .tab__svg path {
+                fill: url(#gradient);
+            }
+        }
+
+        &:hover {
+            .tab__svg path {
+                fill: url(#gradient);
+            }
+        }
+    }
+
+    &__form {
+        display: none;
+    }
+
+    @media (max-width: 920px) {
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+
+        &__item {
+            padding: 0;
+
+            &_active {
+                padding: 1.875rem 0;
+                border-left: none;
+                border-bottom: 2px solid transparent;
+            }
+        }
+    }
+
+    @media (max-width: 620px) {
+        &__svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &__link {
+            display: none;
+        }
+    }
+
+    @media (max-width: 425px) {
+        &__item {
+            display: none;
+        }
+
+        &__form {
+            display: block;
+            width: 100%;
+            &_select {
+                width: 100%;
+                font-size: 1rem;
+                line-height: 150%;
+                color: #fff;
+                background: linear-gradient($color-bg, $color-bg) padding-box,
+                    linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+                border-radius: 10rem;
+                border: 1px solid transparent;
+                padding: 1.125rem 1.875rem;
+            }
+        }
+    }
+}

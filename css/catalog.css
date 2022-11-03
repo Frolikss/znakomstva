@@ -22,6 +22,10 @@ button {
   cursor: pointer;
 }
 
+select {
+  cursor: pointer;
+}
+
 input:focus {
   outline: none;
 }

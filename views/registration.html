@@ -21,10 +21,12 @@
                 </p>
                 <div class="header__country-row">
                     <img src="/assets/svg/flag.svg" alt="" class="header__country-flag">
-                    <select class="header__country-select">
-                        <option value="us">Америка</option>
-                        <option value="ua">Украина</option>
-                    </select>
+                    <form class="header__country-form">
+                        <select class="header__country-select">
+                            <option value="us">Америка</option>
+                            <option value="ua">Украина</option>
+                        </select>
+                    </form>
                 </div>
             </div>
             <div class="container">
@@ -32,7 +34,7 @@
                     <div class="header__logo">
                         <a href="/index.html" class="header__logo-link">
                             <img class="header__logo-image" src="/assets/svg/logo.svg" alt="logo">
-                            <p class="header__logo-name">Znakomstva.com</p>
+                            <span class="header__logo-name">Znakomstva.com</span>
                         </a>
                     </div>
                     <div class="header__menu">
@@ -219,11 +221,13 @@
                     </div>
                     <a class="footer__politics">Политика обработки персональных данных</a>
                     <div class="footer__lang">
-                        <select class="footer__lang-select">
-                            <option value="ru">RU</option>
-                            <option value="ru">UA</option>
-                            <option value="ru">US</option>
-                        </select>
+                        <form class="footer__country-form">
+                            <select class="footer__lang-select">
+                                <option value="ru">RU</option>
+                                <option value="ru">UA</option>
+                                <option value="ru">US</option>
+                            </select>
+                        </form>
                     </div>
                     <p class="footer__copyright">
                         © Company 2021
