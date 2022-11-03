@@ -218,10 +218,9 @@
         font-size: 1em;
         color: #fff;
         text-decoration: none;
-        background: linear-gradient($color-bg, $color-bg) padding-box,
-            linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+        border-image:  linear-gradient(to right, #ee0979 0%, #ff6a00 100%);
+        border-width: 1px;
         border-radius: 50em;
-        border: 1px solid transparent;
         padding: 0.6875rem 2.25rem;
     }
 
