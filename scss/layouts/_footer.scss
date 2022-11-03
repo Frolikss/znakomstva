@@ -2,65 +2,59 @@
     font-size: 0.875em;
     padding: 1.875rem;
 
-    .footer__row {
+    &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .footer__list {
+    &__list {
         display: flex;
         justify-content: space-between;
         gap: 1.125rem;
     }
 
-    .footer__lang-select {
+    &__lang-select {
         color: #fff;
         background: none;
         border: none;
     }
-}
 
-@media (max-width: 1024px) {
-    .footer {
-        .footer__row {
+    @media (max-width: 1024px) {
+        &__row {
             flex-direction: column;
             align-items: center;
         }
 
-        .footer__menu {
+        &__menu {
             font-size: 0.75rem;
             white-space: nowrap;
         }
 
-        .footer__politics,
-        .footer__menu,
-        .footer__lang {
+        &__politics,
+        &__menu,
+        &__lang {
             margin: 0 0 1.25rem 0;
         }
 
-        .footer__copyright {
+        &__copyright {
             font-size: 0.875em;
         }
     }
-}
 
-@media (max-width: 500px) {
-    .footer {
+    @media (max-width: 500px) {
         padding: 1rem;
+
+        &__menu {
+            gap: 0.625rem;
+        }
     }
 
-    .footer__menu {
-        gap: 0.625rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .footer {
+    @media (max-width: 400px) {
         font-size: 0.625em;
-    }
 
-    .footer .footer__list {
-        gap: 0.3rem;
+        &__list {
+            gap: 0.3rem;
+        }
     }
 }
