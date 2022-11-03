@@ -277,9 +277,9 @@ select:focus {
   .tab__form::after {
     content: "";
     background: url(/assets/svg/arrow.svg) no-repeat right center;
-    width: 100px;
-    height: 100px;
-    top: -1%;
+    width: 18px;
+    height: 18px;
+    top: 36px;
     right: 10%;
     position: absolute;
   }
