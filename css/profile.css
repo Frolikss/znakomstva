@@ -532,6 +532,7 @@ select:focus {
     height: 100vh;
     border-radius: 0;
     background-size: cover;
+    background-position: center;
   }
   .profile__photo-buttons {
     display: flex;

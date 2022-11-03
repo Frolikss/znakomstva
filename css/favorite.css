@@ -457,6 +457,7 @@ select:focus {
   min-height: 21.875rem;
   background: url(/assets/png/catalog__item-1.png) no-repeat;
   background-size: cover;
+  background-position: bottom;
   border-radius: 25px;
 }
 .favorite__item_online .catalog__item-name::after {
