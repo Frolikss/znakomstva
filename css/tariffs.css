@@ -113,7 +113,7 @@ select:focus {
   align-items: center;
   gap: 1rem;
 }
-.header__login-link {
+.header_--login-link {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -126,13 +126,13 @@ select:focus {
 .header__list {
   display: none;
 }
-.header__menu_logout {
+.header__menu--logout {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
-.header__menu_login {
+.header__menu--login {
   display: none;
 }
 .header__burger {
@@ -197,10 +197,10 @@ select:focus {
 .header__row {
   height: 7.5rem;
 }
-.header__menu_logout {
+.header__menu--logout {
   display: none;
 }
-.header__menu_login {
+.header__menu--login {
   display: flex;
   justify-content: space-between;
 }
@@ -278,7 +278,7 @@ select:focus {
   .header__logo-image {
     width: 2.5rem;
   }
-  .header__menu_login {
+  .header__menu--login {
     display: none;
   }
   .header__list {
@@ -355,12 +355,12 @@ body {
   gap: 1.25rem;
   flex-direction: column;
   padding: 3.125rem;
-  background: #1C0A22;
+  background: #1c0a22;
   border-radius: 3rem;
   border: 1px solid transparent;
 }
 .tariffs__item:hover {
-  background: linear-gradient(#1C0A22, #1C0A22) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+  background: linear-gradient(#1c0a22, #1c0a22) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
 }
 .tariffs__item:hover .tariffs__button {
   color: #fff;
@@ -389,8 +389,8 @@ body {
   width: 13.75rem;
   gap: 0.625rem;
   font-size: 0.875rem;
-  color: #694B73;
-  background: #3B2143;
+  color: #694b73;
+  background: #3b2143;
   border-radius: 6.25rem;
   padding: 0.9375rem 1.875rem;
 }

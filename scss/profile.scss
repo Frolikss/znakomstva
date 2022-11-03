@@ -1,7 +1,7 @@
 @use "abstracts/" as *;
 @use "layouts/" as *;
 
-@include header__login();
+@include header_--login();
 
 .main {
     min-height: calc(100vh - 10.625rem - 4.6875rem);
@@ -218,7 +218,7 @@
     .header {
         background: none;
         z-index: 1;
-        
+
         &__bell-svg path,
         &__search path {
             fill: #42204e;
@@ -247,7 +247,7 @@
         &__button {
             padding: 1.4375rem 1.875rem;
         }
-    
+
         &__subphotos {
             display: flex;
             gap: 0.5rem;
@@ -255,11 +255,11 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-    
+
         &__subphotos::-webkit-scrollbar {
             display: none;
         }
-    
+
         &__row_photo {
             width: 100%;
             height: calc(100vh - 7.5rem);

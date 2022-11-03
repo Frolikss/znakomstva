@@ -116,13 +116,13 @@ select:focus {
 .header .header__list {
   display: none;
 }
-.header .header__menu_logout {
+.header .header__menu--logout {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
-.header .header__login-link {
+.header .header_--login-link {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -131,7 +131,7 @@ select:focus {
   border: 1px solid transparent;
   padding: 0.6875rem 2.25rem;
 }
-.header .header__menu_login {
+.header .header__menu--login {
   display: none;
 }
 .header .header__burger {
@@ -203,7 +203,7 @@ select:focus {
   .header__row .header__logo {
     margin: 0 0 1.25rem 0;
   }
-  .header__menu_logout {
+  .header__menu--logout {
     flex-direction: column;
   }
 }

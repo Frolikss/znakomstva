@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-@mixin header__login() {
+@mixin header_--login() {
     .header {
         background: #2d1436;
 
@@ -8,12 +8,12 @@
             height: 7.5rem;
         }
 
-        &__menu_logout {
+        &__menu--logout {
             display: none;
         }
 
         &__menu {
-            &_login {
+            &--login {
                 display: flex;
                 justify-content: space-between;
             }
@@ -112,7 +112,7 @@
                 width: 2.5rem;
             }
 
-            &__menu_login {
+            &__menu--login {
                 display: none;
             }
 
@@ -214,11 +214,11 @@
         gap: 1rem;
     }
 
-    &__login-link {
+    &_--login-link {
         font-size: 1em;
         color: #fff;
         text-decoration: none;
-        border-image:  linear-gradient(to right, #ee0979 0%, #ff6a00 100%);
+        border-image: linear-gradient(to right, #ee0979 0%, #ff6a00 100%);
         border-width: 1px;
         border-radius: 50em;
         padding: 0.6875rem 2.25rem;
@@ -228,14 +228,14 @@
         display: none;
     }
 
-    &__menu_logout {
+    &__menu--logout {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
     }
 
-    &__menu_login {
+    &__menu--login {
         display: none;
     }
 

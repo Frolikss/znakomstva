@@ -113,7 +113,7 @@ select:focus {
   align-items: center;
   gap: 1rem;
 }
-.header__login-link {
+.header_--login-link {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -126,13 +126,13 @@ select:focus {
 .header__list {
   display: none;
 }
-.header__menu_logout {
+.header__menu--logout {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
-.header__menu_login {
+.header__menu--login {
   display: none;
 }
 .header__burger {
@@ -291,10 +291,10 @@ select:focus {
 .header__row {
   height: 7.5rem;
 }
-.header__menu_logout {
+.header__menu--logout {
   display: none;
 }
-.header__menu_login {
+.header__menu--login {
   display: flex;
   justify-content: space-between;
 }
@@ -372,7 +372,7 @@ select:focus {
   .header__logo-image {
     width: 2.5rem;
   }
-  .header__menu_login {
+  .header__menu--login {
     display: none;
   }
   .header__list {
@@ -458,7 +458,7 @@ select:focus {
   max-width: 50%;
 }
 .account__item:first-child {
-  border-bottom: 1px solid #4A2956;
+  border-bottom: 1px solid #4a2956;
   padding: 0 0 0.75rem 0;
 }
 .account--name {
@@ -497,7 +497,7 @@ select:focus {
     gap: 0.625rem;
   }
   .account__item--name {
-    color: #6E447B;
+    color: #6e447b;
   }
   .account__button {
     width: 80%;

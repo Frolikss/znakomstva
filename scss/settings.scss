@@ -2,7 +2,7 @@
 @use "layouts/" as *;
 @use "components/" as *;
 
-@include header__login();
+@include header_--login();
 
 .main {
     min-height: calc(100vh - 10.625rem - 4.6875rem);
@@ -84,7 +84,7 @@
     }
 
     &__input {
-        color: #8B5D9A;
+        color: #8b5d9a;
         border: none;
         border-radius: 6.25rem;
         background: #42204e;
@@ -140,7 +140,7 @@
             padding: 2rem;
             background: url(/assets/svg/male.svg) no-repeat center;
             border: 1px solid #ee0d88;
-            
+
             &:first-child:checked {
                 background: url(/assets/svg/male.svg) no-repeat center, #056bda;
                 border: none;
@@ -177,11 +177,11 @@
     }
 
     @media (max-width: 1200px) {
-       &__add {
-        &-item {
-            padding: 1.875rem 1rem;
+        &__add {
+            &-item {
+                padding: 1.875rem 1rem;
+            }
         }
-       } 
     }
 
     @media (max-width: 1024px) {
@@ -239,7 +239,7 @@
             &__label {
                 font-size: 0.75em;
                 text-indent: 1.5rem;
-                color: #6E447B;
+                color: #6e447b;
             }
 
             &__password {

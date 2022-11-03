@@ -2,7 +2,7 @@
 @use "layouts/" as *;
 @use "components/" as *;
 
-@include header__login();
+@include header_--login();
 
 .main {
     min-height: calc(100vh - 10.625rem - 4.6875rem);
@@ -20,7 +20,7 @@
         display: flex;
         gap: 1.25rem;
     }
-    
+
     &__info {
         display: flex;
         flex-direction: column;
@@ -47,9 +47,9 @@
         max-width: 50%;
 
         &:first-child {
-            border-bottom: 1px solid #4A2956;
+            border-bottom: 1px solid #4a2956;
             padding: 0 0 0.75rem 0;
-        }        
+        }
     }
 
     &--name {
@@ -58,7 +58,6 @@
 
     &--summary {
         font-weight: 500;
-
     }
 
     &__text {
@@ -96,7 +95,7 @@
             align-items: center;
             gap: 0.625rem;
             &--name {
-                color: #6E447B; 
+                color: #6e447b;
             }
         }
 

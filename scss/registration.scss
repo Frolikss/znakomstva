@@ -1,7 +1,7 @@
 @use "abstracts/" as *;
 @use "layouts/" as *;
 
-@include header__logout();
+@include header_--logout();
 
 body {
     background: $color-bg;
