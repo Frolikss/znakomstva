@@ -207,9 +207,9 @@ select:focus {
   align-items: center;
   gap: 1.25rem;
   padding: 0 1.875rem;
-  padding-left: 1.75rem;
 }
 .tab__item_active {
+  padding: 0 1.75rem;
   background: linear-gradient(#1c0a22, #1c0a22) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
   border-left: 2px solid transparent;
 }
