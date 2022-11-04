@@ -182,6 +182,41 @@
 }
 
 @mixin header__logout() {
+    .header {
+        &__login-link {
+                position: relative;
+                transition: all .35s;
+
+            &--text {
+                position: relative;
+                z-index: 2;
+            }
+            
+            &:after{
+                position: absolute;
+                border-radius: 50em;
+                transform: scale(0);
+                content: "";
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $button-bg;
+                transition: all .35s;
+              }
+              
+              &:hover{
+                color: #fff;
+              }
+              
+              &:hover:after{
+                transform: scale(1);
+                width: 100%;
+              }
+        
+        }
+    }
+    
     @media (max-width: 600px) {
         .header {
             &__country {

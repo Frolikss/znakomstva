@@ -193,6 +193,34 @@ select:focus {
   }
 }
 
+.header__login-link {
+  position: relative;
+  transition: all 0.35s;
+}
+.header__login-link--text {
+  position: relative;
+  z-index: 2;
+}
+.header__login-link:after {
+  position: absolute;
+  border-radius: 50em;
+  transform: scale(0);
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  transition: all 0.35s;
+}
+.header__login-link:hover {
+  color: #fff;
+}
+.header__login-link:hover:after {
+  transform: scale(1);
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   .header__country {
     display: none;
@@ -337,6 +365,10 @@ body {
   color: #fff;
   background: linear-gradient(90deg, #ee0979, #ff6a00);
   box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
+  transition: box-shadow 0.3s;
+}
+.register__create-button:hover {
+  box-shadow: 0 0 0 rgba(238, 9, 121, 0), 0 5px 50px rgba(255, 106, 0, 0);
 }
 
 @media (max-width: 1024px) {
