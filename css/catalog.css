@@ -361,6 +361,8 @@ select:focus {
   width: 13.75rem;
   height: 21.875rem;
   background: url(/assets/png/catalog__item-1.png) no-repeat;
+  border-radius: 30px;
+  transition: transform 0.3s ease-in-out;
 }
 .catalog__item_online .catalog__item-name::after {
   content: url(/assets/svg/catalog__item_online.svg);
@@ -370,6 +372,10 @@ select:focus {
 }
 .catalog__item-info {
   padding-top: 100%;
+}
+.catalog__item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
 }
 .catalog__item-name, .catalog__item-country {
   padding: 0 0 0 1.25rem;
@@ -390,10 +396,16 @@ select:focus {
   gap: 0.625rem;
   width: 100%;
   font-size: 0.875em;
-  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 30%, #0575E6 50%, #021B79 100%);
+  background-size: 400%;
+  background-position: 0;
   border-radius: 6.25rem;
   padding: 0.875rem 1.875rem;
   z-index: 1;
+  transition: background 1s;
+}
+.catalog__item-button:hover {
+  background-position: 90%;
 }
 @media (max-width: 1300px) {
   .catalog .container {

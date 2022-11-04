@@ -36,7 +36,8 @@
         width: 13.75rem;
         height: 21.875rem;
         background: url(/assets/png/catalog__item-1.png) no-repeat;
-
+        border-radius: 30px;
+        transition: transform 0.3s ease-in-out;
         &_online {
             .catalog__item-name::after {
                 content: url(/assets/svg/catalog__item_online.svg);
@@ -48,6 +49,11 @@
 
         &-info {
             padding-top: 100%;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgb(238 9 121 / 20%), 0 5px 50px rgb(255 106 0 / 20%);
         }
     }
 
@@ -74,10 +80,17 @@
         gap: 0.625rem;
         width: 100%;
         font-size: 0.875em;
-        background: $button-bg;
+        background: linear-gradient(90deg, #ee0979 0%, #ff6a00 30%, #0575E6 50%, #021B79 100%);
+        background-size: 400%;
+        background-position: 0;
         border-radius: 6.25rem;
         padding: 0.875rem 1.875rem;
         z-index: 1;
+        transition: background 1s;
+
+        &:hover {
+            background-position: 90%;
+        }
     }
 
     @media (max-width: 1300px) {
