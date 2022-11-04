@@ -113,6 +113,9 @@ select:focus {
   align-items: center;
   gap: 1rem;
 }
+.header__logo-name:hover {
+  color: #fe6703;
+}
 .header__login-link {
   font-size: 1em;
   color: #fff;
@@ -214,6 +217,9 @@ select:focus {
   align-items: center;
   gap: 3.125rem;
 }
+.header__list-link:hover {
+  color: #fe6703;
+}
 .header__list_active {
   color: #fe6703;
   background: linear-gradient(#2d1436, #2d1436) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
@@ -224,6 +230,9 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.header__user-name:hover {
+  color: #fe6703;
 }
 .header__search {
   position: relative;

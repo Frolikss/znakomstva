@@ -33,6 +33,12 @@
             gap: 3.125rem;
         }
 
+        &__list {
+            &-link:hover {
+                color: #fe6703;
+            }
+        }
+
         &__list_active {
             color: #fe6703;
             background: linear-gradient(#2d1436, #2d1436) padding-box,
@@ -45,6 +51,12 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+
+            &-name {
+                &:hover {
+                    color: #fe6703;
+                }
+            }
         }
 
         &__search {
@@ -237,6 +249,12 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+    }
+
+    &__logo-name {
+        &:hover {
+            color: #fe6703;
+        }
     }
 
     &__login-link {
