@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-@mixin header_--login() {
+@mixin header__login() {
     .header {
         background: #2d1436;
 
@@ -169,6 +169,31 @@
     }
 }
 
+@mixin header__logout() {
+    @media (max-width: 600px) {
+        .header {
+            &__country {
+                display: none;
+            }
+        
+            &__row {
+                flex-direction: column;
+                margin: 1.25rem 0 1.875rem 0;
+            }
+
+                    
+            &__logo {
+                margin: 0 0 1.25rem 0;
+            }
+        
+            &__menu--logout {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
 .header {
     &__country {
         display: flex;
@@ -214,12 +239,13 @@
         gap: 1rem;
     }
 
-    &_--login-link {
+    &__login-link {
         font-size: 1em;
         color: #fff;
         text-decoration: none;
-        border-image: linear-gradient(to right, #ee0979 0%, #ff6a00 100%);
-        border-width: 1px;
+        background: linear-gradient($color-bg, $color-bg) padding-box,
+            linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+        border: 1px solid transparent;
         border-radius: 50em;
         padding: 0.6875rem 2.25rem;
     }

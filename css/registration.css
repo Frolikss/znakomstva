@@ -76,13 +76,7 @@ select:focus {
   position: relative;
 }
 
-.header__country-select {
-  font-size: 1em;
-  color: #fff;
-  background: none;
-  border: none;
-}
-.header .header__country {
+.header__country {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,51 +84,57 @@ select:focus {
   padding: 0.75rem;
   gap: 1em;
 }
-.header .header__country-text {
+.header__country-select {
+  font-size: 1em;
+  color: #fff;
+  background: none;
+  border: none;
+}
+.header__country-text {
   font-size: 1em;
   text-transform: uppercase;
 }
-.header .header__country-row {
+.header__country-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.header .header__country-row .header__country-button {
+.header__country-button {
   align-self: flex-start;
   height: 24px;
 }
-.header .header__row {
+.header__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .header__logo-link {
+.header__logo-link {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.header .header__list {
-  display: none;
-}
-.header .header__menu--logout {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.header .header_--login-link {
+.header__login-link {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
   background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
-  border-radius: 50em;
   border: 1px solid transparent;
+  border-radius: 50em;
   padding: 0.6875rem 2.25rem;
 }
-.header .header__menu--login {
+.header__list {
   display: none;
 }
-.header .header__burger {
+.header__menu--logout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.header__menu--login {
+  display: none;
+}
+.header__burger {
   display: none;
 }
 
@@ -142,37 +142,34 @@ select:focus {
   font-size: 0.875em;
   padding: 1.875rem;
 }
-.footer .footer__row {
+.footer__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer .footer__list {
+.footer__list {
   display: flex;
   justify-content: space-between;
   gap: 1.125rem;
 }
-.footer .footer__lang-select {
+.footer__lang-select {
   color: #fff;
   background: none;
   border: none;
 }
-
 @media (max-width: 1024px) {
-  .footer .footer__row {
+  .footer__row {
     flex-direction: column;
     align-items: center;
   }
-  .footer .footer__menu {
+  .footer__menu {
     font-size: 0.75rem;
     white-space: nowrap;
   }
-  .footer .footer__politics,
-.footer .footer__menu,
-.footer .footer__lang {
+  .footer__politics, .footer__menu, .footer__lang {
     margin: 0 0 1.25rem 0;
   }
-  .footer .footer__copyright {
+  .footer__copyright {
     font-size: 0.875em;
   }
 }
@@ -188,19 +185,20 @@ select:focus {
   .footer {
     font-size: 0.625em;
   }
-  .footer .footer__list {
+  .footer__list {
     gap: 0.3rem;
   }
 }
+
 @media (max-width: 600px) {
-  .header .header__country {
+  .header__country {
     display: none;
   }
   .header__row {
     flex-direction: column;
     margin: 1.25rem 0 1.875rem 0;
   }
-  .header__row .header__logo {
+  .header__logo {
     margin: 0 0 1.25rem 0;
   }
   .header__menu--logout {

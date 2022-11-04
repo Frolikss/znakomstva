@@ -113,13 +113,12 @@ select:focus {
   align-items: center;
   gap: 1rem;
 }
-.header_--login-link {
+.header__login-link {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
-  -o-border-image: linear-gradient(to right, #ee0979 0%, #ff6a00 100%);
-     border-image: linear-gradient(to right, #ee0979 0%, #ff6a00 100%);
-  border-width: 1px;
+  background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+  border: 1px solid transparent;
   border-radius: 50em;
   padding: 0.6875rem 2.25rem;
 }
