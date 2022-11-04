@@ -17,6 +17,10 @@
         border-radius: 10rem;
         border: 1px solid transparent;
         padding: 1.25rem 1.3rem 1.1rem;
+
+        &:hover {
+            background: $button-bg;
+        }
     }
 
     &__col {
@@ -104,15 +108,20 @@
     }
 
     &__button {
+        @include button__animate(&);
+
         display: flex;
         justify-content: center;
         align-items: center;
         width: 13.75rem;
         gap: 0.625rem;
         font-size: 0.875rem;
-        background: $button-bg;
         border-radius: 6.25rem;
         padding: 0.875rem 1.875rem;
+
+        &:hover {
+            animation: glow 10s linear infinite;
+        }
     }
 
     &__data {

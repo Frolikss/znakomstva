@@ -74,33 +74,18 @@
     }
 
     &__item-button {
+        @include button__animate(&);
+
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
         width: 100%;
         font-size: 0.875em;
-        background: linear-gradient(45deg, #ee0979, #ff6a00, #0575e6 , #021b79,#ee0979, #ff6a00,#0575e6 , #021b79);
-        background-size: 700%;
+
         border-radius: 6.25rem;
         padding: 0.875rem 1.875rem;
         z-index: 1;
-
-        &:hover {
-            animation: glow 10s linear infinite;
-        }
-    }
-
-    @keyframes glow {
-        0% {
-            background-position: 0;
-        }
-        50% {
-            background-position: 100%;
-        }
-        100% {
-            background-position: 0;
-        }
     }
 
     @media (max-width: 1300px) {

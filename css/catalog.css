@@ -390,14 +390,14 @@ select:focus {
   font-size: 0.75em;
 }
 .catalog__item-button {
+  background: linear-gradient(45deg, #ee0979, #ff6a00, #0575e6, #021b79, #ee0979, #ff6a00, #0575e6, #021b79);
+  background-size: 700%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
   width: 100%;
   font-size: 0.875em;
-  background: linear-gradient(45deg, #ee0979, #ff6a00, #0575e6, #021b79, #ee0979, #ff6a00, #0575e6, #021b79);
-  background-size: 700%;
   border-radius: 6.25rem;
   padding: 0.875rem 1.875rem;
   z-index: 1;
