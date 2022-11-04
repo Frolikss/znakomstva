@@ -4,7 +4,7 @@
 @include header__login();
 
 .main {
-    min-height: calc(100vh - 10.625rem - 4.6875rem);
+    min-height: calc(100vh - 170px - 75px);
     overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
         gap: 0.5rem;
         align-self: center;
         padding: 1.5rem 2.185rem;
-        border: 1px solid #fff;
+        border: 1px solid $white;
         border-radius: 6rem;
         width: 50%;
 

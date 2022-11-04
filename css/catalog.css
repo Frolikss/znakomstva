@@ -8,7 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #230E2B;
-  background: radial-gradient(circle at center bottom, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
+  background: radial-gradient(circle at center bottom, #381a42 0%, #230E2B 60%) no-repeat, #230E2B;
   cursor: default;
 }
 
@@ -28,6 +28,10 @@ select {
 
 input:focus {
   outline: none;
+}
+
+input[type=file] {
+  display: none;
 }
 
 select:focus {
@@ -120,7 +124,7 @@ select:focus {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+  background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0d88, #ff6a00) border-box;
   border: 1px solid transparent;
   border-radius: 50em;
   padding: 0.6875rem 2.25rem;
@@ -222,7 +226,7 @@ select:focus {
 }
 .header__list_active {
   color: #fe6703;
-  background: linear-gradient(#2d1436, #2d1436) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+  background: linear-gradient(#2d1436, #2d1436) padding-box, linear-gradient(to right, #ee0d88, #ff6a00) border-box;
   border-bottom: 4px solid transparent;
   padding: 0 0 2.875rem 0;
 }
@@ -311,13 +315,13 @@ select:focus {
     position: absolute;
     width: 100%;
     left: 0;
-    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    background: linear-gradient(to right, #ee0d88, #ff6a00);
     height: 3px;
     border-radius: 6.25rem;
   }
   .header__burger span {
     position: absolute;
-    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    background: linear-gradient(to right, #ee0d88, #ff6a00);
     left: 0;
     width: 100%;
     height: 3px;
@@ -349,6 +353,7 @@ select:focus {
 .catalog__row {
   display: flex;
   gap: 1.25rem;
+  padding: 20px 0;
 }
 .catalog__item {
   display: flex;
@@ -390,7 +395,7 @@ select:focus {
   font-size: 0.75em;
 }
 .catalog__item-button {
-  background: linear-gradient(45deg, #ee0979, #ff6a00, #0575e6, #021b79, #ee0979, #ff6a00, #0575e6, #021b79);
+  background: linear-gradient(45deg, #ee0d88, #ff6a00, #0575E6, #021B79, #ee0d88, #ff6a00, #0575E6, #021B79);
   background-size: 700%;
   display: flex;
   justify-content: center;
@@ -444,6 +449,9 @@ select:focus {
 @media (max-width: 1180px) {
   .catalog__header {
     padding: 0 1rem;
+  }
+  .catalog__row {
+    padding: 20px;
   }
 }
 @media (max-width: 425px) {

@@ -5,7 +5,7 @@
 @include header__login();
 
 .main {
-    min-height: calc(100vh - 10.625rem - 4.6875rem);
+    min-height: calc(100vh - 170px - 75px);
     align-items: stretch;
     justify-content: flex-start;
 }

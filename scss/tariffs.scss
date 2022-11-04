@@ -4,14 +4,15 @@
 @include header__login();
 
 body {
-    background: radial-gradient(circle at right bottom, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
+    background: radial-gradient(circle at right bottom, $color-bg-second 0%, $color-bg-main 60%) no-repeat,
+        $color-bg-main;
 }
 
 .main {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    min-height: calc(100vh - 10.625rem - 4.6875rem);
+    min-height: calc(100vh - 170px - 75px);
 }
 
 .tariffs {
@@ -36,15 +37,15 @@ body {
         gap: 1.25rem;
         flex-direction: column;
         padding: 3.125rem;
-        background: #1c0a22;
+        background: $bg-secondary;
         border-radius: 3rem;
         border: 1px solid transparent;
 
         &:hover {
-            background: linear-gradient(#1c0a22, #1c0a22) padding-box,
-                linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+            background: linear-gradient($bg-secondary, $bg-secondary) padding-box, $button-bg border-box;
+
             .tariffs__button {
-                color: #fff;
+                color: $white;
                 background: $button-bg;
             }
         }
@@ -76,8 +77,8 @@ body {
         width: 13.75rem;
         gap: 0.625rem;
         font-size: 0.875rem;
-        color: #694b73;
-        background: #3b2143;
+        color: $font-button;
+        background: $bg-button;
         border-radius: 6.25rem;
         padding: 0.9375rem 1.875rem;
     }

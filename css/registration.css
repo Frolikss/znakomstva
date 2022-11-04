@@ -8,7 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
   color: #fff;
   background: #230E2B;
-  background: radial-gradient(circle at center bottom, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
+  background: radial-gradient(circle at center bottom, #381a42 0%, #230E2B 60%) no-repeat, #230E2B;
   cursor: default;
 }
 
@@ -28,6 +28,10 @@ select {
 
 input:focus {
   outline: none;
+}
+
+input[type=file] {
+  display: none;
 }
 
 select:focus {
@@ -120,7 +124,7 @@ select:focus {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+  background: linear-gradient(#230E2B, #230E2B) padding-box, linear-gradient(to right, #ee0d88, #ff6a00) border-box;
   border: 1px solid transparent;
   border-radius: 50em;
   padding: 0.6875rem 2.25rem;
@@ -197,7 +201,7 @@ select:focus {
   position: relative;
   transition: all 0.35s;
 }
-.header__login-link--text {
+.header__login-link > * {
   position: relative;
   z-index: 2;
 }
@@ -210,7 +214,7 @@ select:focus {
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  background: linear-gradient(to right, #ee0d88, #ff6a00);
   transition: all 0.35s;
 }
 .header__login-link:hover {
@@ -238,11 +242,11 @@ select:focus {
 }
 body {
   background: #230E2B;
-  background: radial-gradient(circle at 40% top, #381a42 0%, #230e2b 60%) no-repeat, #230e2b;
+  background: radial-gradient(circle at 40% top, #381a42 0%, #230E2B 60%) no-repeat, #230E2B;
 }
 
 .main {
-  min-height: calc(100vh - 6.875rem - 4.6875rem);
+  min-height: calc(100vh - 110px - 75px);
 }
 
 .register__text {
@@ -361,9 +365,9 @@ body {
   background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, #42204E;
 }
 .register__create-button {
-  flex-flow: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #fff;
-  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  background: linear-gradient(to right, #ee0d88, #ff6a00);
   box-shadow: 0 5px 50px rgba(238, 9, 121, 0.2), 0 5px 50px rgba(255, 106, 0, 0.2);
   transition: box-shadow 0.3s;
 }
@@ -377,7 +381,7 @@ body {
     top: 20%;
   }
   .main {
-    min-height: calc(100vh - 6.875rem - 10.9375rem);
+    min-height: calc(100vh - 110px - 175px);
   }
 }
 @media (max-width: 768px) {

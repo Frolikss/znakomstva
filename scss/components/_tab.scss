@@ -2,7 +2,7 @@
 
 .tab {
     align-self: flex-start;
-    background: #1c0a22;
+    background: $bg-secondary;
     border-radius: 1.875rem;
     display: flex;
     flex-direction: column;
@@ -18,8 +18,7 @@
 
         &_active {
             padding: 0 1.75rem;
-            background: linear-gradient(#1c0a22, #1c0a22) padding-box,
-                linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+            background: linear-gradient($bg-secondary, $bg-secondary) padding-box, $button-bg border-box;
             border-left: 2px solid transparent;
             .tab__svg path {
                 fill: url(#gradient);
@@ -87,9 +86,8 @@
                 width: 100%;
                 font-size: 1rem;
                 line-height: 150%;
-                color: #fff;
-                background: linear-gradient($color-bg, $color-bg) padding-box,
-                    linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+                color: $white;
+                background: linear-gradient($color-bg-main, $color-bg-main) padding-box, $button-bg border-box;
                 border-radius: 10rem;
                 border: 1px solid transparent;
                 padding: 1.125rem 1.875rem;

@@ -5,7 +5,7 @@
 @include header__login();
 
 .main {
-    min-height: calc(100vh - 10.625rem - 4.6875rem);
+    min-height: calc(100vh - 170px - 75px);
 }
 
 .settings {
@@ -48,12 +48,14 @@
         gap: 0.5rem;
 
         &-item {
+            cursor: pointer;
             flex: 1;
             width: 1.875rem;
             height: 1.875rem;
-            border: 1px solid #925fa4;
+            border: 1px solid $button-text-subcolor;
             border-radius: 1.875rem;
             padding: 1.875rem;
+            background: url(/assets/svg/camera.svg) no-repeat center;
         }
     }
 
@@ -84,10 +86,10 @@
     }
 
     &__input {
-        color: #8b5d9a;
+        color: $placeholder-color;
         border: none;
         border-radius: 6.25rem;
-        background: #42204e;
+        background: $svg-color;
         padding: 1.4375rem 0;
         max-width: 60%;
         flex: 1;
@@ -95,7 +97,7 @@
 
         &::placeholder {
             font-family: "Rubik", sans-serif;
-            color: #8b5d9a;
+            color: $placeholder-color;
         }
     }
 
@@ -125,7 +127,7 @@
 
     &__select {
         appearance: none;
-        background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, #42204e;
+        background: url(/assets/svg/arrow.svg) no-repeat right 1rem center, $svg-color;
     }
 
     &__gender {
@@ -139,7 +141,7 @@
             border-radius: 6.25rem;
             padding: 2rem;
             background: url(/assets/svg/male.svg) no-repeat center;
-            border: 1px solid #ee0d88;
+            border: 1px solid $gradient-bright-part1;
 
             &:first-child:checked {
                 background: url(/assets/svg/male.svg) no-repeat center, #056bda;
@@ -239,7 +241,7 @@
             &__label {
                 font-size: 0.75em;
                 text-indent: 1.5rem;
-                color: #6e447b;
+                color: $subtext;
             }
 
             &__password {

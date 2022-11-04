@@ -4,7 +4,7 @@
 @include header__logout();
 
 .main {
-    min-height: calc(100vh - 6.875rem - 4.6875rem);
+    min-height: calc(100vh - 110px - 75px);
 }
 
 .login {
@@ -39,7 +39,7 @@
 
         &-input {
             width: 100%;
-            color: #8b5d9a;
+            color: $placeholder-color;
             border: none;
             border-radius: 6.25rem;
             padding: 1.4375rem 0;
@@ -49,7 +49,7 @@
 
             &::placeholder {
                 font-family: "Rubik", sans-serif;
-                color: #8b5d9a;
+                color: $placeholder-color;
             }
 
             &_button {
@@ -86,7 +86,7 @@
             width: 100%;
             font-size: 0.875em;
             align-self: center;
-            color: #925fa4;
+            color: $button-text-subcolor;
         }
     }
 }
@@ -98,7 +98,7 @@
     }
 
     .main {
-        min-height: calc(100vh - 6.875rem - 10.9375rem);
+        min-height: calc(100vh - 110px - 175px);
     }
 
     .container {

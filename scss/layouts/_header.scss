@@ -1,8 +1,8 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/" as *;
 
 @mixin header__login() {
     .header {
-        background: #2d1436;
+        background: $bg-button-secondary-color;
 
         &__row {
             height: 7.5rem;
@@ -20,7 +20,7 @@
 
             &-select {
                 font-size: 1em;
-                color: #fff;
+                color: $white;
                 background: none;
                 border: none;
             }
@@ -35,14 +35,14 @@
 
         &__list {
             &-link:hover {
-                color: #fe6703;
+                color: $text-hover-color;
             }
         }
 
         &__list_active {
-            color: #fe6703;
-            background: linear-gradient(#2d1436, #2d1436) padding-box,
-                linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+            color: $text-hover-color;
+            background: linear-gradient($bg-button-secondary-color, $bg-button-secondary-color) padding-box,
+                $button-bg border-box;
             border-bottom: 4px solid transparent;
             padding: 0 0 2.875rem 0;
         }
@@ -54,7 +54,7 @@
 
             &-name {
                 &:hover {
-                    color: #fe6703;
+                    color: $text-hover-color;
                 }
             }
         }
@@ -184,15 +184,15 @@
 @mixin header__logout() {
     .header {
         &__login-link {
-                position: relative;
-                transition: all .35s;
+            position: relative;
+            transition: all 0.35s;
 
-            &--text {
+            & > * {
                 position: relative;
                 z-index: 2;
             }
-            
-            &:after{
+
+            &:after {
                 position: absolute;
                 border-radius: 50em;
                 transform: scale(0);
@@ -202,44 +202,41 @@
                 width: 0;
                 height: 100%;
                 background: $button-bg;
-                transition: all .35s;
-              }
-              
-              &:hover{
-                color: #fff;
-              }
-              
-              &:hover:after{
+                transition: all 0.35s;
+            }
+
+            &:hover {
+                color: $white;
+            }
+
+            &:hover:after {
                 transform: scale(1);
                 width: 100%;
-              }
-        
+            }
         }
     }
-    
+
     @media (max-width: 600px) {
         .header {
             &__country {
                 display: none;
             }
-        
+
             &__row {
                 flex-direction: column;
                 margin: 1.25rem 0 1.875rem 0;
             }
 
-                    
             &__logo {
                 margin: 0 0 1.25rem 0;
             }
-        
+
             &__menu--logout {
                 flex-direction: column;
             }
         }
     }
 }
-
 
 .header {
     &__country {
@@ -252,7 +249,7 @@
 
         &-select {
             font-size: 1em;
-            color: #fff;
+            color: $white;
             background: none;
             border: none;
         }
@@ -288,16 +285,15 @@
 
     &__logo-name {
         &:hover {
-            color: #fe6703;
+            color: $text-hover-color;
         }
     }
 
     &__login-link {
         font-size: 1em;
-        color: #fff;
+        color: $white;
         text-decoration: none;
-        background: linear-gradient($color-bg, $color-bg) padding-box,
-            linear-gradient(to right, #ee0979 0%, #ff6a00 100%) border-box;
+        background: linear-gradient($color-bg-main, $color-bg-main) padding-box, $button-bg border-box;
         border: 1px solid transparent;
         border-radius: 50em;
         padding: 0.6875rem 2.25rem;
